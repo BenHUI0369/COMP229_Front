@@ -61,12 +61,16 @@
           <td></td>
           <td>{{post.name}}</td>
           <td><img src="../../assets/Gif/{{getImageName(post.pokemonID, post.name)}}" alt="{{post.name}}"></td>
-          <td>{{post.pokemonType}}</td>
+          <td class="pkemonTypeContainer">
+            <div *ngFor="let type of post.pokemonType" class="{{type}}">
+              <span>{{type}}</span>
+            </div>
+          </td>
           <td></td>
           <div class="actionBtn">
             <button mat-icon-button color="primary">
               <mat-icon>edit</mat-icon>
-            </button>
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button mat-icon-button color="warn">
               <mat-icon>delete</mat-icon>
             </button>

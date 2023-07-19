@@ -136,15 +136,152 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 180px;
+    height: 200px;
     border: 1px solid #ccc;
 }
 
-.actionBtn button {
-    margin-right: 10px;
+
+
+.header th {
+    font-size: 30px;
+    text-align: center;
 }
 
-.header {
-    font-size: 30px;
+tbody td {
+    text-align: center;
+}
+
+.pkemonTypeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 165px;
+}
+
+// Pokemon type Css
+
+.Normal {
+    background-color: rgb(168, 168, 120);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Fighting {
+    background-color: rgb(192, 48, 40);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Flying {
+    background-color: rgb(168, 144, 240);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Poison {
+    background-color: rgb(160, 64, 160);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Ground {
+    background-color: rgb(224, 192, 104);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Rock {
+    background-color: rgb(184, 160, 56);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Bug {
+    background-color: rgb(168, 184, 32);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Gost {
+    background-color: rgb(112, 88, 152);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Steel {
+    background-color: rgb(184, 184, 208);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Fire {
+    background-color: rgb(240, 128, 48);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Water {
+    background-color: rgb(104, 144, 240);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Grass {
+    background-color: rgb(120, 200, 80);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Electric {
+    background-color: rgb(248, 208, 48);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Psychic {
+    background-color: rgb(248, 88, 136);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Ice {
+    background-color: rgb(152, 216, 216);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Dragon {
+    background-color: rgb(112, 56, 248);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Dark {
+    background-color: rgb(112, 88, 72);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Fairy {
+    background-color: rgb(238, 153, 172);
+    border-radius: 10px;
+    width: 60px;
     text-align: center;
 }
