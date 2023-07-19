@@ -15,6 +15,10 @@ export class MainComponent {
   loadPosts() {
     this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
       this.posts = res;
+      // sort by the pokemon ID
+      /*this.posts.sort((a,b) => {
+        return a.pokemonID - b.pokemonID;
+      })*/
     });
   }
 
