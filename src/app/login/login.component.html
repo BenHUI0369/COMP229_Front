@@ -1,0 +1,29 @@
+<html>
+<body>
+  <div class="loginLayOut">
+    <div id="login-left">
+      <h1>Welcome to pokemon DB</h1>
+    </div>
+    <div id="login-right">
+      <header>
+        <h1>User Login</h1><br>
+      </header>
+  
+      <mat-form-field class="inputField">
+        <mat-label>Username</mat-label>
+        <input matInput>
+      </mat-form-field><br>
+  
+      <mat-form-field class="inputField">
+        <mat-label>Password</mat-label>
+        <input matInput>
+      </mat-form-field><br><br>
+  
+      <div mat-dialog-actions class="action">
+        <a mat-button mat-raised-button color="primary" routerLink="/main" class="visitorBtn">Visitor</a>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" type="submit" class="adminBtn">Admin Login</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

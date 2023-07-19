@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+        <!--
+            COMP 229 (SEC. 007)
+            Project (Group 3)
+
+            Date: July 17, 2023
+     
+            Filename: admin.component.html
+        -->
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Pokemon Records</h1><br>
+        </header>
+          
+          <div class="mat-elevation-z8">
+            <table mat-table>
+              
+              <!-- Pokemon ID Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell  mat-sort-header> ID </th>
+                <td mat-cell> </td>
+              </ng-container>
+          
+              <!-- Pokemon Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell  mat-sort-header> Name </th>
+                <td mat-cell></td>
+              </ng-container>
+          
+              <!-- Pokemon Property Column -->
+              <ng-container matColumnDef="property">
+                <th mat-header-cell  mat-sort-header> Property </th>
+                <td mat-cell> </td>
+              </ng-container>
+
+              <!-- Action Column -->
+              <ng-container matColumnDef="action">
+                <th mat-header-cell  mat-sort-header> Action </th>
+                <td mat-cell >
+                  <button mat-icon-button color="primary">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+          
+              <tr mat-header-row ></tr>
+              <tr mat-row ></tr>
+          
+            </table>
+          </div>
+          
+    </body>
+</html>

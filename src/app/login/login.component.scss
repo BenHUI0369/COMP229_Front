@@ -1,0 +1,97 @@
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+body {
+  background: linear-gradient(to right, #7c7171, #9393cb, #526a52);
+}
+
+.visitorBtn {
+  border-radius: 20px;
+  background-color: #6977e2;
+}
+
+.adminBtn {
+  border-radius: 20px;
+  background-color: #bf7bdf;
+  width: 300px;
+}
+
+.loginLayOut {
+  width: 1600px;
+  display: flex;
+  margin: auto;
+  height: 560px;
+  box-shadow: 1px 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  top: 150px;
+}
+
+#login-left {
+  width: 800px;
+  padding-left: 200px;
+  padding-top: 10px;
+  color: #bf7bdf;
+  h1 {
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    left: -100px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  background-image: url('../../assets/Image/login-background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#login-right {
+  width: 500px;
+  padding-left: 100px;
+  padding-top: 100px;
+  background-color: #FFFFFF;
+}
+
+.inputField {
+  width: 400px;
+  border-radius: 20px;
+}
+
+.inputField .mat-form-field-outline-start {
+  border-radius: 10px 0 0 10px;
+}
+
+.inputField .mat-form-field-outline-end {
+  border-radius: 0 10px 10px 0;
+}

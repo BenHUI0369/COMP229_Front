@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+        <!--
+            COMP 229 (SEC. 007)
+            Project (Group 3)
+
+            Date: July 17, 2023
+     
+            Filename: app.component.html
+        -->
+    </head>
+
+    <body>
+
+        <header></header>
+
+          <!-- Angular Material : Toolbar -->
+          <mat-toolbar color="primary">
+            
+            <!-- Custom Logo placed in the main navigation bar -->
+            <span><a href="/login" class="navbar-brand"><img src="/assets/logo.jpg" alt="Logo" style="width: 50px; height: auto"></a>&nbsp;&nbsp;&nbsp;</span>
+            
+            <span>Pokemon Database</span>
+            <span class="example-spacer"></span>
+            <div>
+              <nav>
+                <!-- Angular Material : Button -->
+                <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
+                <a mat-button routerLink="/main">Main</a>
+                <a mat-button routerLink="/admin">Admin</a>
+              </nav>
+            </div>
+          </mat-toolbar>
+          <router-outlet></router-outlet>
+
+    </body>
+</html>
