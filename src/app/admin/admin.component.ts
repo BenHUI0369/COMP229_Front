@@ -34,4 +34,8 @@ export class AdminComponent {
     let formattedName = pokemonName.toLowerCase().replace(/\s/g, '');
     return `${this.padZeroes(pokemonID)}_${formattedName}.gif`;
   }
+
+  getpokemonTypePng(pokemonType: String) {
+    return `${pokemonType}.png`
+  }
 }

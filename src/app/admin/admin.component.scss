@@ -154,8 +154,13 @@ tbody td {
 .pkemonTypeContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 165px;
+    align-items:center;
+}
+
+.pokemonTypeImg {
+    width: 60px;
+    height: auto;
+    padding-bottom: 10px;
 }
 
 // Pokemon type Css
