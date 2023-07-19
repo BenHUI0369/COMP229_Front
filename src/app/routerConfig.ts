@@ -6,7 +6,7 @@ import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
     {
-        path : 'login',
+        path : '',
         component: LoginComponent
     },
     {
