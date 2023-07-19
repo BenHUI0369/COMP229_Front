@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-   <head>
-        <!--
+
+<head>
+  <!--
             COMP 229 (SEC. 007)
             Project (Group 3)
 
@@ -10,53 +10,75 @@
      
             Filename: admin.component.html
         -->
-    </head>
+</head>
 
-    <body>
+<body>
+  <div class="header">
+    <header>
+      <h1>Pokemon Records</h1>
+      <button mat-icon-button color="warn" (click)="loadPosts()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="clearAllPosts()">
+        <mat-icon>clear_all</mat-icon>
+      </button>
+    </header>
+  </div>
 
-        <header>
-            <h1>Pokemon Records</h1><br>
-        </header>
-          
-          <div class="mat-elevation-z8">
-            <table mat-table>
-              
-              <!-- Pokemon ID Column -->
-              <ng-container matColumnDef="id">
-                <th mat-header-cell  mat-sort-header> ID </th>
-                <td mat-cell> </td>
-              </ng-container>
-          
-              <!-- Pokemon Name Column -->
-              <ng-container matColumnDef="name">
-                <th mat-header-cell  mat-sort-header> Name </th>
-                <td mat-cell></td>
-              </ng-container>
-          
-              <!-- Pokemon Property Column -->
-              <ng-container matColumnDef="property">
-                <th mat-header-cell  mat-sort-header> Property </th>
-                <td mat-cell> </td>
-              </ng-container>
 
-              <!-- Action Column -->
-              <ng-container matColumnDef="action">
-                <th mat-header-cell  mat-sort-header> Action </th>
-                <td mat-cell >
-                  <button mat-icon-button color="primary">
-                    <mat-icon>add</mat-icon>
-                  </button>
-                  <button mat-icon-button color="warn">
-                    <mat-icon>delete</mat-icon>
-                  </button>
-                </td>
-              </ng-container>
-          
-              <tr mat-header-row ></tr>
-              <tr mat-row ></tr>
-          
-            </table>
+  <div class="pokemon-container">
+    <table mat-table class="upperSection">
+      <thead class="header">
+        <tr>
+          <!-- Pokemon ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell mat-sort-header> ID </th>
+            <td mat-cell> </td>
+          </ng-container>
+
+          <!-- Pokemon Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell mat-sort-header> Name </th>
+            <td mat-cell></td>
+          </ng-container>
+
+          <!-- Pokemon Property Column -->
+          <ng-container matColumnDef="property">
+            <th mat-header-cell mat-sort-header> Property </th>
+            <td mat-cell> </td>
+          </ng-container>
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="action">
+            <th mat-header-cell mat-sort-header> Action </th>
+
+          </ng-container>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts" class="allPokemon">
+          <td>{{post.pokemonID}}</td>
+          <td></td>
+          <td>{{post.name}}</td>
+          <td><img src="../../assets/Gif/{{getImageName(post.pokemonID, post.name)}}" alt="{{post.name}}"></td>
+          <td>{{post.pokemonType}}</td>
+          <td></td>
+          <div class="actionBtn">
+            <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
           </div>
-          
-    </body>
+
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+
+</body>
+
 </html>
