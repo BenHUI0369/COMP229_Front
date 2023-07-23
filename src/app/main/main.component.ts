@@ -28,7 +28,7 @@ export class MainComponent {
 
   padZeroes(number: Number) {
     let paddedNumber = String(number);
-    while (paddedNumber.length < 3) {
+    while (paddedNumber.length < 4) {
       paddedNumber = '0' + paddedNumber;
     }
     return paddedNumber;
