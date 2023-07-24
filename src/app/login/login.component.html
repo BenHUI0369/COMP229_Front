@@ -1,5 +1,6 @@
 <html>
 <body>
+  <form class="example-form" #loginform="ngForm" (submit)="onSubmit(loginform)">
   <div class="loginLayOut">
     <div id="login-left">
       <h1>Welcome to pokemon DB</h1>
@@ -11,19 +12,25 @@
   
       <mat-form-field class="inputField">
         <mat-label>Username</mat-label>
-        <input matInput>
+        <input matInput placeholder="Username" required name="username" [(ngModel)]="username" >
       </mat-form-field><br>
   
       <mat-form-field class="inputField">
         <mat-label>Password</mat-label>
-        <input matInput>
+        <input matInput [type]="hide ? 'password' : 'text'" required name="password" [(ngModel)]="password" >
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field><br><br>
   
       <div mat-dialog-actions class="action">
-        <button mat-raised-button color="primary" type="submit" class="adminBtn">Login</button>&nbsp;&nbsp;&nbsp;
+        <button [disabled]="loading" mat-raised-button color="primary" type="submit" class="adminBtn">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Login</button>&nbsp;&nbsp;&nbsp;
         <a mat-button mat-raised-button color="primary" routerLink="/main" class="visitorBtn">Register</a>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
       </div>
     </div>
   </div>
+</form>
 </body>
 </html>
