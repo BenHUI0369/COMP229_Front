@@ -10,20 +10,28 @@ import { AuthenticationService } from './service/authentication.service';
 export class AppComponent implements OnInit {
   title = 'pokemondb';
   isloggingin: any;
+  loginStatus: any;
 
   constructor(public authenticationService: AuthenticationService){
     this.isloggingin = authenticationService.getLoginValue();
+    this.loginStatus = authenticationService.getLoginStatusValue();
   }
 
   ngOnInit() {
     this.authenticationService.getLoginValue().subscribe((value: boolean) => {
+      //console.log("app ngOnInit" + value);
       this.isloggingin = value;
-
-      if(this.isloggingin == true) {
-        this.authenticationService.logout();
-      }
-
     });
+
+    this.authenticationService.getLoginStatusValue().subscribe((value: string) => {
+      this.loginStatus = value;
+    });
+  }
+    
+  onClickLogout() {
+    if(this.isloggingin == true && !this.loginStatus) {
+      this.authenticationService.logout();
+    }
   }
 
   

@@ -27,7 +27,7 @@
             <div>
               <nav>
                 <!-- Angular Material : Button -->
-                <a mat-button routerLink="/" routerLinkActive="active">{{isloggingin? 'Logout' : 'Login'}}</a>
+                <a mat-button routerLink="/" routerLinkActive="active" (click)="onClickLogout()">{{isloggingin? 'Logout' : 'Login'}}</a>
                 <a mat-button routerLink="/main">Main</a>
                 <a mat-button routerLink="/admin">Admin</a>
               </nav>

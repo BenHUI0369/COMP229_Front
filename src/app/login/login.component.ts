@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     password: string = '';
     hide = true;
     islogin = false;
+    loginStatus = '';
 
     constructor(
         private router: Router,
@@ -35,6 +36,10 @@ export class LoginComponent implements OnInit {
       this.authenticationService.getLoginValue().subscribe((value: boolean) => {
         this.islogin = value;
       });
+
+      this.authenticationService.getLoginStatusValue().subscribe((value: string) => {
+        this.loginStatus = value;
+      });
     }
 
     onSubmit(loginData: any) {
@@ -44,7 +49,9 @@ export class LoginComponent implements OnInit {
 
           if(this.islogin == false){
             this.authenticationService.login(this.username, this.password).pipe(first()).subscribe ( (resultData:any) =>{
+              this.loginStatus = resultData.status;
               if (resultData.status) {
+                this.authenticationService.setLoginValue(true);
                 this._snackBar.open("Login successfully!", "Close", {
                   duration: 1000,
                   verticalPosition: 'top'
@@ -62,5 +69,6 @@ export class LoginComponent implements OnInit {
           } 
         
     }
+
 
 }
