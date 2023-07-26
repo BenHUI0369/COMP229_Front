@@ -27,6 +27,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { JwtInterceptor } from './helper/jwt.interceptor';
 import { ErrorInterceptor } from './helper/error.interceptor';
 
+import { Jwt } from 'jsonwebtoken';
+
 @NgModule({
   declarations: [
     AppComponent,

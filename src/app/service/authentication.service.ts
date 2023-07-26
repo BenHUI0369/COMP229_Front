@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { Jwt } from 'jsonwebtoken';
 import { Admin } from '../model/admin.js';
 
 @Injectable({ providedIn: 'root' })
@@ -28,6 +28,16 @@ export class AuthenticationService {
 
     login(username: string, password: string) {
         return this.http.post<any>(`http://localhost:4000/pokemons/authenticate`, { username, password })
+            .pipe(map(admin => {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('admin', JSON.stringify(admin));
+                this.adminSubject.next(admin);
+                return admin;
+            }))
+    }
+
+    login_jwt(username: string, password: string) {
+        return this.http.post<any>(`http://localhost:4000/auth/login`, { username, password })
             .pipe(map(admin => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('admin', JSON.stringify(admin));
