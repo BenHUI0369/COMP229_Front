@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import { AuthenticationService } from '../service/authentication.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RegisterComponent } from '../register/register.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +26,9 @@ export class LoginComponent implements OnInit {
     constructor(
         private router: Router,
         private authenticationService: AuthenticationService,
-        private _snackBar: MatSnackBar
+        private _snackBar: MatSnackBar,
+        private formBuilder: FormBuilder,
+        private dialog: MatDialog
     ) { 
         // redirect to home if already logged in
         if (this.authenticationService.adminValue) { 
@@ -104,5 +108,15 @@ export class LoginComponent implements OnInit {
       
   }
 
+  openRegistrationDialog() {
+    const dialogRef = this.dialog.open(RegisterComponent, {
+      width: '400px', // Set the width of the dialog
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // Handle any actions after the dialog is closed (if needed)
+      console.log('Dialog closed');
+    });
+  }
 
 }

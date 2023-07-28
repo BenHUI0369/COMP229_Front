@@ -1,13 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditFormComponent } from '../edit-form/edit-form.component'; 
+
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
+  providers: [MatDialog]
 })
 export class AdminComponent {
-  constructor(private http: HttpClient){
+  constructor(
+    private http: HttpClient,
+    private dialog: MatDialog
+    ){
     this.loadPosts();
   };
 
@@ -56,10 +63,16 @@ export class AdminComponent {
     }
   };
 
-  edit() {
-    console.log('edit');
-    console.log();
-  }
+  edit(post: any) {
+    const dialogRef = this.dialog.open(EditFormComponent, {
+      width: '400px', // Set the width of the modal as per your requirement
+      data: post // Pass the post data to the edit form component
+    }); 
+
+    dialogRef.afterClosed().subscribe(result => {
+      // Handle any logic after the modal is closed (e.g., refresh the data, if needed)
+    });
+  } 
 
   delete() {
     console.log('delete');

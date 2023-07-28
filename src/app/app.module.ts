@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
 
 import { RouterModule } from '@angular/router';
 import routerConfig from './routerConfig';
@@ -31,14 +32,19 @@ import { Jwt } from 'jsonwebtoken';
 
 // import user and admin guard
 import { AdminGuardService } from './helper/admin-auth-guard'
-import { UserGuardService } from './helper/user-auth-guard'
+import { UserGuardService } from './helper/user-auth-guard';
+import { EditFormComponent } from './edit-form/edit-form.component'
+import { MatDialogModule } from '@angular/material/dialog';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainComponent,
-    AdminComponent
+    AdminComponent,
+    EditFormComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,9 @@ import { UserGuardService } from './helper/user-auth-guard'
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatCardModule
 
   ],
   providers: [

@@ -6,6 +6,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './helper/auth.guard';
 import { AdminGuardService } from './helper/admin-auth-guard';
 import { UserGuardService } from './helper/user-auth-guard';
+import { EditFormComponent } from './edit-form/edit-form.component';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
     {
@@ -27,6 +29,14 @@ const appRoutes: Routes = [
         component: AdminComponent,
         canActivate: [AdminGuardService]
     },
+    {
+        path : 'edit',
+        component: EditFormComponent
+    },
+    {
+        path : 'reg',
+        component: RegisterComponent
+    }
 ];
 
 export default appRoutes;

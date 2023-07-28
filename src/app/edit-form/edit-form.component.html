@@ -1,0 +1,12 @@
+<h2>Edit Form</h2>
+<form (ngSubmit)="save()">
+  <label for="pokemonID">Pokemon ID</label><br>
+  <input type="text" id="pokemonID" [(ngModel)]="postData.pokemonID" name="pokemonID" required><br>
+
+  <label for="name">Name</label><br>
+  <input type="text" id="name" [(ngModel)]="postData.name" name="name" required>
+
+  <!-- Add more form fields for other properties you want to edit -->
+
+  <button type="submit">Save</button>
+</form>
