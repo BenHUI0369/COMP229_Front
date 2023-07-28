@@ -4,16 +4,19 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './helper/auth.guard';
+import { AdminGuardService } from './helper/admin-auth-guard';
+import { UserGuardService } from './helper/user-auth-guard';
 
 const appRoutes: Routes = [
     {
         path : '',
-        component: LoginComponent, 
+        component: MainComponent, 
         canActivate: [AuthGuard] 
     },
     {
         path : 'main',
-        component: MainComponent
+        component: MainComponent,
+        canActivate: [UserGuardService]
     },
     {
         path : 'login',
@@ -21,7 +24,8 @@ const appRoutes: Routes = [
     },
     {
         path : 'admin',
-        component: AdminComponent
+        component: AdminComponent,
+        canActivate: [AdminGuardService]
     },
 ];
 

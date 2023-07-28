@@ -55,4 +55,14 @@ export class AdminComponent {
       })
     }
   };
+
+  edit() {
+    console.log('edit');
+    console.log();
+  }
+
+  delete() {
+    console.log('delete');
+    
+  }
 }

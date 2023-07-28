@@ -39,6 +39,10 @@
             <td mat-cell> </td>
           </ng-container>
 
+          <ng-container matColumnDef="DB_id">
+            <th mat-header-cell mat-sort-header id="_id"> DBID </th>
+          </ng-container>
+
           <!-- Pokemon Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell mat-sort-header> Name </th>
@@ -62,6 +66,7 @@
         <tr *ngFor="let post of posts" class="allPokemon">
           <td>{{post.pokemonID}}</td>
           <td></td>
+          <td id="_id">{{post._id}}</td>
           <td>{{post.name}}</td>
           <td><img src="../../assets/Gif/{{getImageName(post.pokemonID, post.name)}}" alt="{{post.name}}"></td>
           <td class="pkemonTypeContainer_">
@@ -72,10 +77,10 @@
           </td>
           <td></td>
           <div class="actionBtn">
-            <button mat-icon-button color="primary">
+            <button mat-icon-button color="primary" (click)="edit()">
               <mat-icon>edit</mat-icon>
             </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button mat-icon-button color="warn">
+            <button mat-icon-button color="warn" (click)="delete()">
               <mat-icon>delete</mat-icon>
             </button>
           </div>

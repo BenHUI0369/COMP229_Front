@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         this.loginStatus = value;
       });
     }
-
+    /* backup
     onSubmit(loginData: any) {
         this.submitted = true;
         this.error = '';
@@ -62,13 +62,47 @@ export class LoginComponent implements OnInit {
                   duration: 1000,
                   verticalPosition: 'top'
                 });
-                this.router.navigate(['/login']);
+                this.router.navigate(['/']);
                 this.loading = false;
               }
             });
           } 
         
-    }
+    }*/
+
+    onSubmit(loginData: any) {
+      this.submitted = true;
+      this.error = '';
+      this.loading = true;
+
+        if(this.islogin == false){
+          this.authenticationService.login_jwt(this.username, this.password).pipe(first()).subscribe ( (resultData:any) =>{
+            this.loginStatus = resultData.permission? 'true': 'false';
+            if (resultData.permission >= 0) {
+              this.authenticationService.setLoginValue(true);
+              this._snackBar.open("Login successfully!", "Close", {
+                duration: 1000,
+                verticalPosition: 'top'
+              });
+              // bring admin to admin page, user to main page
+              if (resultData.permission !== 1) {
+                this.router.navigate(['/admin']);
+              } else {
+                this.router.navigate(['/main']);
+              }
+              
+            } else {
+              this._snackBar.open("Fail to login!", "Close", {
+                duration: 1000,
+                verticalPosition: 'top'
+              });
+              this.router.navigate(['/']);
+              this.loading = false;
+            }
+          });
+        } 
+      
+  }
 
 
 }

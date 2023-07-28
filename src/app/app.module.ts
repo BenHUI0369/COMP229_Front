@@ -29,6 +29,10 @@ import { ErrorInterceptor } from './helper/error.interceptor';
 
 import { Jwt } from 'jsonwebtoken';
 
+// import user and admin guard
+import { AdminGuardService } from './helper/admin-auth-guard'
+import { UserGuardService } from './helper/user-auth-guard'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +60,8 @@ import { Jwt } from 'jsonwebtoken';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AdminGuardService,
+    UserGuardService
 
 
   ],
