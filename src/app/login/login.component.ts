@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { first } from 'rxjs/operators';
+import { catchError, first } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthenticationService } from '../service/authentication.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterComponent } from '../register/register.component';
 import { MatDialog } from '@angular/material/dialog';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -45,46 +46,33 @@ export class LoginComponent implements OnInit {
         this.loginStatus = value;
       });
     }
-    /* backup
-    onSubmit(loginData: any) {
-        this.submitted = true;
-        this.error = '';
-        this.loading = true;
-
-          if(this.islogin == false){
-            this.authenticationService.login(this.username, this.password).pipe(first()).subscribe ( (resultData:any) =>{
-              this.loginStatus = resultData.status;
-              if (resultData.status) {
-                this.authenticationService.setLoginValue(true);
-                this._snackBar.open("Login successfully!", "Close", {
-                  duration: 1000,
-                  verticalPosition: 'top'
-                });
-                this.router.navigate(['/admin']);
-              } else {
-                this._snackBar.open("Fail to login!", "Close", {
-                  duration: 1000,
-                  verticalPosition: 'top'
-                });
-                this.router.navigate(['/']);
-                this.loading = false;
-              }
-            });
-          } 
-        
-    }*/
-
+    
     onSubmit(loginData: any) {
       this.submitted = true;
       this.error = '';
       this.loading = true;
-
-        if(this.islogin == false){
-          this.authenticationService.login_jwt(this.username, this.password).pipe(first()).subscribe ( (resultData:any) =>{
-            this.loginStatus = resultData.permission? 'true': 'false';
+  
+      if (this.islogin == false) {
+        this.authenticationService.login_jwt(this.username, this.password)
+          .pipe(
+            first(),
+            catchError(error => {
+              // Handle login error, e.g., show an error message to the user
+              console.error('Login failed:', error);
+              this._snackBar.open('Wrong username or password', 'Close', {
+                duration: 3000,
+                verticalPosition: 'top'
+              });
+              this.loading = false;
+              return throwError('Login failed');
+            })
+          )
+          .subscribe(resultData => {
+            this.loginStatus = resultData.permission ? 'true' : 'false';
             if (resultData.permission >= 0) {
+              // Handle successful login
               this.authenticationService.setLoginValue(true);
-              this._snackBar.open("Login successfully!", "Close", {
+              this._snackBar.open('Login successfully!', 'Close', {
                 duration: 1000,
                 verticalPosition: 'top'
               });
@@ -94,19 +82,18 @@ export class LoginComponent implements OnInit {
               } else {
                 this.router.navigate(['/main']);
               }
-              
             } else {
-              this._snackBar.open("Fail to login!", "Close", {
+              // Handle login failure
+              this._snackBar.open('Fail to login!', 'Close', {
                 duration: 1000,
                 verticalPosition: 'top'
               });
               this.router.navigate(['/']);
-              this.loading = false;
             }
+            this.loading = false;
           });
-        } 
-      
-  }
+      }
+    }
 
   openRegistrationDialog() {
     const dialogRef = this.dialog.open(RegisterComponent, {
