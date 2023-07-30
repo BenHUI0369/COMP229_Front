@@ -6,6 +6,17 @@
   <label for="name">Name</label><br>
   <input type="text" id="name" [(ngModel)]="postData.name" name="name" required>
 
+  <div>
+    <label for="pokemonType">Type</label><br>
+    <mat-select [(ngModel)]="postData.pokemonType" name="pokemonType" multiple>
+      <mat-option *ngFor="let type of pokemonType" [value]="type.name">{{ type.name }}</mat-option>
+    </mat-select>
+  </div>
+
+
+  <label for="name">Description</label><br>
+  <input type="text" id="description" [(ngModel)]="postData.description" name="description" required>
+
   <!-- Add more form fields for other properties you want to edit -->
 
   <button type="submit">Save</button>

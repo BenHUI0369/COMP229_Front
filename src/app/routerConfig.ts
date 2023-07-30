@@ -32,10 +32,6 @@ const appRoutes: Routes = [
     {
         path : 'edit',
         component: EditFormComponent
-    },
-    {
-        path : 'reg',
-        component: RegisterComponent
     }
 ];
 

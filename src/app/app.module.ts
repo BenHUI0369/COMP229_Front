@@ -15,12 +15,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 import { RouterModule } from '@angular/router';
 import routerConfig from './routerConfig';
 
 import { AuthenticationService } from './service/authentication.service';
+import { PokemonEditService } from './service/pokemon-edit.service';
 
 // import http which connect with API
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
@@ -36,6 +38,7 @@ import { UserGuardService } from './helper/user-auth-guard';
 import { EditFormComponent } from './edit-form/edit-form.component'
 import { MatDialogModule } from '@angular/material/dialog';
 import { RegisterComponent } from './register/register.component';
+import { DeletePokemonFormComponent } from './delete-pokemon-form/delete-pokemon-form.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { RegisterComponent } from './register/register.component';
     MainComponent,
     AdminComponent,
     EditFormComponent,
-    RegisterComponent
+    RegisterComponent,
+    DeletePokemonFormComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ import { RegisterComponent } from './register/register.component';
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
 
   ],
   providers: [
@@ -77,5 +82,8 @@ import { RegisterComponent } from './register/register.component';
 })
 export class AppModule {
 
-  constructor(private authenticationService: AuthenticationService){}
+  constructor(
+    private authenticationService: AuthenticationService,
+    private pokemoneditService: PokemonEditService
+    ){}
  }

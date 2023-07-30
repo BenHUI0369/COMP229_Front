@@ -10,7 +10,28 @@ import { HttpClient } from '@angular/common/http';
 export class EditFormComponent {
   
   postData: any;
-
+  clickedTypes: string[] = [];
+  dropdownOpenedOnce: boolean = false;
+  pokemonType: any[] = [
+    {name: 'Bug'}, 
+    {name: 'Dark'},
+    {name: 'Dragon'},
+    {name: 'Electric'},
+    {name: 'Fairy'},
+    {name: 'Fighting'},
+    {name: 'Fire'},
+    {name: 'Flying'},
+    {name: 'Gost'},
+    {name: 'Grass'},
+    {name: 'Ground'},
+    {name: 'Ice'},
+    {name: 'Normal'},
+    {name: 'Poison'},
+    {name: 'Psychic'},
+    {name: 'Rock'},
+    {name: 'Steel'},
+    {name: 'Water'}
+  ];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dialogRef: MatDialogRef<EditFormComponent>,
@@ -18,15 +39,18 @@ export class EditFormComponent {
     
   ) {
     // Initialize the form data with the existing post data
-    this.postData = { ...data };
+    //this.postData = { ...data };
+    this.postData = { ...data.post };
   }
 
   // Function to save the edited data
   save() {
     // Perform any additional validation, if needed
     console.log('save');
-    
-    // Close the modal and pass the edited data back to the main component
     this.dialogRef.close(this.postData);
+  }
+
+  cancel() {
+    this.dialogRef.close(false);
   }
 }
