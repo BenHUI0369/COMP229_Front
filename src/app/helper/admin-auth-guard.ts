@@ -15,16 +15,22 @@ export class AdminGuardService implements CanActivate {
 
   canActivate(): boolean {
     const token: any = localStorage.getItem('user');
+    // Redirect to login page
+    if (!token) {
+      this.router.navigate(['login']);
+      return false;
+    }
     const decoded: any = jwt_decode(token);
     const permission = decoded.permission;
-
     if (permission === 0) {
+      //this.router.navigate(['/admin']);
       return true;
     }
     this._snackBar.open("You don't have Admin permission!", "Close", {
         duration: 1000,
         verticalPosition: 'top'
       });
+      this.router.navigate(['/login']);
     return false;
   }
 }

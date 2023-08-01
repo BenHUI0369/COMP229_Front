@@ -13,24 +13,24 @@ export class EditFormComponent {
   clickedTypes: string[] = [];
   dropdownOpenedOnce: boolean = false;
   pokemonType: any[] = [
-    {name: 'Bug'}, 
-    {name: 'Dark'},
-    {name: 'Dragon'},
-    {name: 'Electric'},
-    {name: 'Fairy'},
-    {name: 'Fighting'},
-    {name: 'Fire'},
-    {name: 'Flying'},
-    {name: 'Gost'},
-    {name: 'Grass'},
-    {name: 'Ground'},
-    {name: 'Ice'},
-    {name: 'Normal'},
-    {name: 'Poison'},
-    {name: 'Psychic'},
-    {name: 'Rock'},
-    {name: 'Steel'},
-    {name: 'Water'}
+    {name: 'Bug', image: '../assets/pokemonType/Bug.png'}, 
+    {name: 'Dark', image: '../assets/pokemonType/Dark.png'}, 
+    {name: 'Dragon', image: '../assets/pokemonType/Dragon.png'}, 
+    {name: 'Electric', image: '../assets/pokemonType/Electric.png'}, 
+    {name: 'Fairy', image: '../assets/pokemonType/Fairy.png'}, 
+    {name: 'Fighting', image: '../assets/pokemonType/Fighting.png'}, 
+    {name: 'Fire', image: '../assets/pokemonType/Fire.png'}, 
+    {name: 'Flying', image: '../assets/pokemonType/Flying.png'}, 
+    {name: 'Ghost', image: '../assets/pokemonType/Ghost.png'}, 
+    {name: 'Grass', image: '../assets/pokemonType/Grass.png'}, 
+    {name: 'Ground', image: '../assets/pokemonType/Ground.png'}, 
+    {name: 'Ice', image: '../assets/pokemonType/Ice.png'}, 
+    {name: 'Normal', image: '../assets/pokemonType/Normal.png'}, 
+    {name: 'Poison', image: '../assets/pokemonType/Poison.png'}, 
+    {name: 'Psychic', image: '../assets/pokemonType/Psychic.png'}, 
+    {name: 'Rock', image: '../assets/pokemonType/Rock.png'}, 
+    {name: 'Steel', image: '../assets/pokemonType/Steel.png'}, 
+    {name: 'Water', image: '../assets/pokemonType/Water.png'}
   ];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,

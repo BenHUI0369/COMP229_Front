@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component';
 const appRoutes: Routes = [
     {
         path : '',
-        component: MainComponent, 
+        component: LoginComponent, 
         canActivate: [AuthGuard] 
     },
     {
@@ -28,10 +28,6 @@ const appRoutes: Routes = [
         path : 'admin',
         component: AdminComponent,
         canActivate: [AdminGuardService]
-    },
-    {
-        path : 'edit',
-        component: EditFormComponent
     }
 ];
 

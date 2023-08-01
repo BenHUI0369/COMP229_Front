@@ -16,4 +16,8 @@ export class PokemonEditService {
   editPokemon(updatedPost: any) {
     return this.http.put<any>(`${this.apiUrl}/${updatedPost._id}`, updatedPost);
   }
+
+  createPokemon(newPokemon: any) {
+    return this.http.post<any>(`${this.apiUrl}`, newPokemon);
+  }
 }

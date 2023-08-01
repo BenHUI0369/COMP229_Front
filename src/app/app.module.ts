@@ -39,6 +39,7 @@ import { EditFormComponent } from './edit-form/edit-form.component'
 import { MatDialogModule } from '@angular/material/dialog';
 import { RegisterComponent } from './register/register.component';
 import { DeletePokemonFormComponent } from './delete-pokemon-form/delete-pokemon-form.component';
+import { AddPokemonFormComponent } from './add-pokemon-form/add-pokemon-form.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { DeletePokemonFormComponent } from './delete-pokemon-form/delete-pokemon
     AdminComponent,
     EditFormComponent,
     RegisterComponent,
-    DeletePokemonFormComponent
+    DeletePokemonFormComponent,
+    AddPokemonFormComponent
   ],
   imports: [
     BrowserModule,

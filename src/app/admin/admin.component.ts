@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { EditFormComponent } from '../edit-form/edit-form.component'; 
 import { DeletePokemonFormComponent } from '../delete-pokemon-form/delete-pokemon-form.component';
 import { PokemonEditService } from '../service/pokemon-edit.service';
+import { AddPokemonFormComponent } from '../add-pokemon-form/add-pokemon-form.component';
 
 
 @Component({
@@ -69,7 +70,7 @@ export class AdminComponent {
   edit(post: any) {
     const copiedData = JSON.parse(JSON.stringify(post));
     const dialogRef = this.dialog.open(EditFormComponent, {
-      width: '400px', // Set the width of the modal as per your requirement
+      width: '600px', // Set the width of the modal as per your requirement
       data: copiedData // Pass the post data to the edit form component
     }); 
 
@@ -115,5 +116,24 @@ export class AdminComponent {
         )
       }
     });
+  }
+
+  add() {
+    const dialogRef = this.dialog.open(AddPokemonFormComponent, {
+      width: '400px'
+    });
+
+    dialogRef.afterClosed().subscribe(created => {
+      if (created) {
+        this.pokemonEdit.createPokemon(created).subscribe(
+          resolve => {
+            console.log("Pokemon Created!");
+          },
+          reject => {
+            console.log("Faile to Create Pokemon!");
+          }
+        )
+      }
+    })
   }
 }
