@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthenticationService } from './service/authentication.service';
 import jwt_decode from 'jwt-decode';
-import { LoginLogoutService } from './helper/login-logout.service';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -16,31 +15,19 @@ export class AppComponent implements OnInit {
   loginStatus: any;
   alreadyLogin: boolean = localStorage.getItem('user')? true: false;
   checkisAdmin = false;
-  isAdmin2: boolean = false;
+  isAdmin2: boolean = true;
 
 
 
   constructor(
     public authenticationService: AuthenticationService,
-    private _snackBar: MatSnackBar,
-    private loginOutService: LoginLogoutService
+    private _snackBar: MatSnackBar
     ){
     this.isloggingin = authenticationService.getLoginValue();
     this.loginStatus = authenticationService.getLoginStatusValue();
   }
 
   ngOnInit() {
-    this.authenticationService.getLoginValue().subscribe((value: boolean) => {
-      //console.log("app ngOnInit" + value);
-      this.isloggingin = value;
-      this.alreadyLogin = localStorage.getItem('user')? true: false;
-    });
-
-    this.authenticationService.getLoginStatusValue().subscribe((value: string) => {
-      this.loginStatus = value;
-    });
-
-
     if(this.alreadyLogin) {
       let JWT: any = localStorage.getItem('user');
       let decodeJWT: any = jwt_decode(JWT);
@@ -51,12 +38,24 @@ export class AppComponent implements OnInit {
         this.isAdmin2 = false;
       }
     }
+
+  
+    this.authenticationService.getLoginValue().subscribe((value: boolean) => {
+      //console.log("app ngOnInit" + value);
+      this.isloggingin = value;
+      this.alreadyLogin = localStorage.getItem('user')? true: false;
+      this.checkAdminStatus();
+    });
+
+    this.authenticationService.getLoginStatusValue().subscribe((value: string) => {
+      this.loginStatus = value;
+      this.checkAdminStatus();
+    });
   }
     
   onClickLogout() {
     if(this.isloggingin == true && !this.loginStatus) {
       this.authenticationService.logout();
-      this.loginOutService.logout();
       this.alreadyLogin  = localStorage.getItem('user')? true: false;
       this._snackBar.open("Logout successfully!", "Close", {
         duration: 1000,
@@ -65,12 +64,14 @@ export class AppComponent implements OnInit {
     }
   }
 
-  get isLoggingIn(): boolean {
-    return this.loginOutService.isLoggedIn();
+  checkAdminStatus() {
+    if (this.alreadyLogin) {
+      let JWT: any = localStorage.getItem('user');
+      let decodeJWT: any = jwt_decode(JWT);
+      let permission = decodeJWT.permission;
+      this.isAdmin2 = permission === 0;
+    } else {
+      this.isAdmin2 = false;
+    }
   }
-
-  get isAdmin$(): Observable<boolean> {
-    return this.loginOutService.isAdminUser$();
-  }
-
 }
