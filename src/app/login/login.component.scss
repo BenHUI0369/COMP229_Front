@@ -31,18 +31,44 @@ section {
 }
 
 body {
-  background: linear-gradient(to right, #7c7171, #9393cb, #526a52);
+  //background: linear-gradient(to right, #7c7171, #9393cb, #526a52);
+  background-image: url("../../assets/Image/login-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.example-form {
+  position: relative;
+  z-index: 9;
 }
 
 .visitorBtn {
   border-radius: 20px;
   background-color: #6977e2;
+  border-style: solid;
+  border-color: #bf7bdf;
 }
 
 .adminBtn, #adminBtn {
   border-radius: 20px;
   background-color: #bf7bdf;
   width: 300px;
+  border-style: solid;
+  border-color: #bf7bdf;
 }
 
 .loginLayOut {
