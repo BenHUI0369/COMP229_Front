@@ -1,125 +1,189 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 36px;
-    text-transform: uppercase;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th,
-td {
-    padding: 10px;
+.pokemonList {
+    width: 200px;
+    height: 300px;
     text-align: left;
-    border-bottom: 1px solid #fff;
+    border-style: double;
+    border-radius: 21px;
+    margin-left: 20px;
+    margin-top: 60px;
+    background: linear-gradient(to top left, rgb(39, 65, 91) 0%, transparent 50%), linear-gradient(to top right, rgb(10, 20, 30) 0%, transparent 50%);
+
 }
 
-th {
-    background-color: #222;
-    color: #fff;
-}
-
-tr:nth-child(even) {
-    background-color: #333;
-}
-
-tr:hover {
-    background-color: #444;
-}
-
-td img {
-    /* width: 50px;
-    height: 50px; */
-    transition: transform 0.3s ease-in-out;
-}
-
-td img:hover {
-    transform: scale(1.2);
-}
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    td img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* Existing CSS styles */
-
-/* Existing CSS styles */
-
-.sort-buttons {
-    margin-bottom: 20px;
+.imageContainer {
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 
-button {
-    margin-right: 10px;
-    background-color: #222;
-    color: #fff;
-    padding: 8px 16px;
-    font-size: 14px;
+.pokemonImage {
+    vertical-align: middle;
+}
+
+.imageCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokemonNumber {
+    font-size: 15px;
+    text-align: left;
+}
+
+.pokemonName {
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.pokemonType {
+    padding-top: 30px;
+    display: flex;
+    justify-content:space-around;
+}
+
+hr {
     border: none;
-    cursor: pointer;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-button:hover {
-    background-color: #444;
+.Normal {
+    background-color: rgb(168, 168, 120);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.Fighting {
+    background-color: rgb(192, 48, 40);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropbtn {
-    background-color: #222;
-    color: #fff;
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
+.Flying {
+    background-color: rgb(168, 144, 240);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.Poison {
+    background-color: rgb(160, 64, 160);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
+.Ground {
+    background-color: rgb(224, 192, 104);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.Rock {
+    background-color: rgb(184, 160, 56);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.Bug {
+    background-color: rgb(168, 184, 32);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
 }
+
+.Gost {
+    background-color: rgb(112, 88, 152);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Steel {
+    background-color: rgb(184, 184, 208);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Fire {
+    background-color: rgb(240, 128, 48);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Water {
+    background-color: rgb(104, 144, 240);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Grass {
+    background-color: rgb(120, 200, 80);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Electric {
+    background-color: rgb(248, 208, 48);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Psychic {
+    background-color: rgb(248, 88, 136);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Ice {
+    background-color: rgb(152, 216, 216);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Dragon {
+    background-color: rgb(112, 56, 248);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Dark {
+    background-color: rgb(112, 88, 72);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.Fairy {
+    background-color: rgb(238, 153, 172);
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+
+
+  
+  
+  

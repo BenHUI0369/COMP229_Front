@@ -2,8 +2,8 @@
 <body id="login-wrapper">
   <form class="example-form" #loginform="ngForm" (submit)="onSubmit(loginform)">
   <div class="loginLayOut">
+    <h1 id="welcomeMessage">Welcome to Pokemon Database</h1>
     <div id="login-left">
-      <h1>Welcome to pokemon DB</h1>
     </div>
     <div id="login-right">
       <header>
@@ -26,7 +26,10 @@
       <div mat-dialog-actions class="action">
         <button [disabled]="loading" mat-raised-button color="primary" type="submit" class="adminBtn" id="adminBtn">
           <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Login</button>&nbsp;&nbsp;&nbsp;
-        <a mat-button mat-raised-button color="primary" class="visitorBtn" (click)="openRegistrationDialog()">Register</a>
+        <a mat-button mat-raised-button color="primary" class="registerBtn"  id="registerBtn" (click)="openRegistrationDialog()">Register</a><br>
+        <div id="visitorWrapper">
+          <a mat-button mat-raised-button color="primary" class="visitorBtn"  id="visitorBtn" (click)="visitor()">Vistors</a>
+        </div>
         <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
       </div>
     </div>

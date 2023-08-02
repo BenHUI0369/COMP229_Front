@@ -106,4 +106,49 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  visitor() {
+    const username = 'user';
+    const password = 'user';
+
+    this.authenticationService.login_jwt(username, password)
+    .pipe(
+      first(),
+      catchError(error => {
+        // Handle login error, e.g., show an error message to the user
+        console.error('Login failed:', error);
+        this._snackBar.open('Wrong username or password', 'Close', {
+          duration: 3000,
+          verticalPosition: 'top'
+        });
+        this.loading = false;
+        return throwError('Login failed');
+      })
+    )
+    .subscribe(resultData => {
+      this.loginStatus = resultData.permission ? 'true' : 'false';
+      if (resultData.permission >= 0) {
+        // Handle successful login
+        this.authenticationService.setLoginValue(true);
+        this._snackBar.open('Welcome visitor!', 'Close', {
+          duration: 1000,
+          verticalPosition: 'top'
+        });
+        // bring admin to admin page, user to main page
+        if (resultData.permission !== 1) {
+          this.router.navigate(['/admin']);
+        } else {
+          this.router.navigate(['/main']);
+        }
+      } else {
+        // Handle login failure
+        this._snackBar.open('Fail to login!', 'Close', {
+          duration: 1000,
+          verticalPosition: 'top'
+        });
+        this.router.navigate(['/']);
+      }
+      this.loading = false;
+    });
+  }
+
 }

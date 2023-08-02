@@ -39,6 +39,14 @@ body {
   position: relative;
 }
 
+/*
+#login-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+*/
 
 body::after {
   content: "";
@@ -56,19 +64,42 @@ body::after {
   z-index: 9;
 }
 
-.visitorBtn {
+.registerBtn, #registerBtn {
+  font-size: 21px;
+  color: rgb(1, 0, 66);
   border-radius: 20px;
-  background-color: #6977e2;
+  background-color: white;
+  width: 120px;
+  height: 50px;
   border-style: solid;
-  border-color: #bf7bdf;
+  border-color: rgb(1, 0, 66);
 }
 
 .adminBtn, #adminBtn {
+  font-size: 21px;
   border-radius: 20px;
-  background-color: #bf7bdf;
-  width: 300px;
+  background-color: rgb(1, 0, 66);
+  width: 120px;
+  height: 50px;
   border-style: solid;
-  border-color: #bf7bdf;
+  border-color: rgb(1, 0, 66);
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+.visitorBtn, #visitorBtn {
+  font-size: 21px;
+  color: rgb(1, 0, 66);
+  border-radius: 20px;
+  background-color: transparent;
+  width: 120px;
+  height: 50px;
+  margin-top: 60px;
+  margin-right: 100px;
+}
+
+#visitorWrapper {
+  text-align: center  ;
 }
 
 .loginLayOut {
@@ -79,7 +110,17 @@ body::after {
   box-shadow: 1px 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
-  top: 150px;
+  top: 300px;
+}
+
+#welcomeMessage {
+  display: flex;
+  text-align: center;
+  font-size: 60px;
+  position: absolute;
+  left: 25%;
+  top: -15%;
+  text-shadow: -3px 0 rgb(109, 154, 164), 0 3px rgb(109, 154, 164), 3px 0 rgb(109, 154, 164), 0 -3px rgb(109, 154, 164);
 }
 
 #login-left {
@@ -87,12 +128,6 @@ body::after {
   padding-left: 200px;
   padding-top: 10px;
   color: #bf7bdf;
-  h1 {
-    text-align: center;
-    font-size: 45px;
-    position: relative;
-    left: -100px;
-  }
   p {
     font-size: 20px;
     line-height: 27px;
@@ -107,6 +142,11 @@ body::after {
   padding-left: 100px;
   padding-top: 100px;
   background-color: #FFFFFF;
+
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
 }
 
 .inputField {
