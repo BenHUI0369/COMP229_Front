@@ -44,4 +44,17 @@ export class MainComponent {
   getpokemonTypePng(pokemonType: String) {
     return `${pokemonType}.png`
   }
+
+  formatPokeminID(pokemonID: Number) {
+    if(pokemonID.toString().length < 4) {
+      let editID = pokemonID.toString();
+      let numberDigit = 4 - pokemonID.toString().length;
+      while(numberDigit > 0) {
+        editID = '0' + editID;
+        numberDigit = numberDigit - 1;
+      }
+      return editID;
+    } 
+    return pokemonID;
+  }
 }

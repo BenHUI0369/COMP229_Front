@@ -1,3 +1,4 @@
+/*
 .pokemonList {
     width: 200px;
     height: 300px;
@@ -181,9 +182,321 @@ hr {
     width: 60px;
     text-align: center;
 }
+*/
 
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 120%;
+}
 
+.pokemonCard-img{
+    //background-image: url('../../assets/PokeCard/electric.png');
+    background-repeat: repeat;
+    background-size: cover;
+    width: 502px;
+    height: 670px;
+    display: inline-block;
+    //margin: 50px;
+    z-index: 9;
+}
 
+.pokemonID-img {
+    height: 20px;
+}
+
+.pokemonID-img h5 {
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3px;
+    padding-right: 25px;
+    padding-bottom: 9px;
+    margin-top: 30px;
+    position: relative;
+    top: 30px;
+    right: 75px;
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    top: 100px;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.img img {
+    //width: 150px;
+    scale: 200%;
+    padding-bottom: 60px;
+}
+
+.name{
+    position: relative;
+    margin-top: 35px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: left;
+    left: -15px;
+}
+
+.typeWrapper {
+    position: relative;
+    top: 150px;
+    left: 80px;
+}
+
+.type {
+    height: 0px;
+}
+
+h6{
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    top:-65px;
+    left: 110px;
+    color: #ffffff;
+    z-index: 100;
+}
+
+/*
+pokemon type square box
+*/
+
+.BugSquare {
+    background-color: rgb(148, 188, 74);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.DarkSquare {
+    background-color: rgb(115, 108, 117);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.DragonSquare {
+    background-color: rgb(106, 123, 175);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.ElectricSquare {
+    background-color: rgb(229, 197, 49);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.FairySquare {
+    background-color: rgb(227, 151, 209);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.FightingSquare {
+    background-color: rgb(203, 95, 72);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.FireSquare {
+    background-color: rgb(234, 122, 60);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.FlyingSquare {
+    background-color: rgb(125, 166, 222);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.GhostSquare {
+    background-color: rgb(132, 106, 182);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.GrassSquare {
+    background-color: rgb(113, 197, 88);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.GroundSquare {
+    background-color: rgb(204, 159, 79);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.IceSquare {
+    background-color: rgb(112, 203, 212);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.NormalSquare {
+    background-color: rgb(170, 176, 159);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.PoisonSquare {
+    background-color: rgb(180, 104, 183);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.PsychicSquare {
+    background-color: rgb(229, 112, 155);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.RockSquare {
+    background-color: rgb(178, 160, 97);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.SteelSquare {
+    background-color: rgb(137, 161, 176);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
+
+.WaterSquare {
+    background-color: rgb(83, 154, 2264);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top:-40px;
+    left: 45px;
+    margin-top: 60px;
+    box-shadow: 5px 5px #FFFFFF;
+    border-radius: 3px;
+}
   
   
   

@@ -1,0 +1,1148 @@
+[
+  {
+    "pokemonID": 252,
+    "name": "Treecko",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 253,
+    "name": "Grovyle",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 254,
+    "name": "Sceptile",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 255,
+    "name": "Torchic",
+    "pokemonType": [
+      "Fire"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 256,
+    "name": "Combusken",
+    "pokemonType": [
+      "Fire",
+      "Fighting"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 257,
+    "name": "Blaziken",
+    "pokemonType": [
+      "Fire",
+      "Fighting"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 258,
+    "name": "Mudkip",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 259,
+    "name": "Marshtomp",
+    "pokemonType": [
+      "Water",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 260,
+    "name": "Swampert",
+    "pokemonType": [
+      "Water",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 261,
+    "name": "Poochyena",
+    "pokemonType": [
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 262,
+    "name": "Mightyena",
+    "pokemonType": [
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 263,
+    "name": "Zigzagoon",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 264,
+    "name": "Linoone",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 265,
+    "name": "Wurmple",
+    "pokemonType": [
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 266,
+    "name": "Silcoon",
+    "pokemonType": [
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 267,
+    "name": "Beautifly",
+    "pokemonType": [
+      "Bug",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 268,
+    "name": "Cascoon",
+    "pokemonType": [
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 269,
+    "name": "Dustox",
+    "pokemonType": [
+      "Bug",
+      "Poison"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 270,
+    "name": "Lotad",
+    "pokemonType": [
+      "Water",
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 271,
+    "name": "Lombre",
+    "pokemonType": [
+      "Water",
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 272,
+    "name": "Ludicolo",
+    "pokemonType": [
+      "Water",
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 273,
+    "name": "Seedot",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 274,
+    "name": "Nuzleaf",
+    "pokemonType": [
+      "Grass",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 275,
+    "name": "Shiftry",
+    "pokemonType": [
+      "Grass",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 276,
+    "name": "Taillow",
+    "pokemonType": [
+      "Normal",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 277,
+    "name": "Swellow",
+    "pokemonType": [
+      "Normal",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 278,
+    "name": "Wingull",
+    "pokemonType": [
+      "Water",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 279,
+    "name": "Pelipper",
+    "pokemonType": [
+      "Water",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 280,
+    "name": "Ralts",
+    "pokemonType": [
+      "Psychic",
+      "Fairy"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 281,
+    "name": "Kirlia",
+    "pokemonType": [
+      "Psychic",
+      "Fairy"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 282,
+    "name": "Gardevoir",
+    "pokemonType": [
+      "Psychic",
+      "Fairy"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 283,
+    "name": "Surskit",
+    "pokemonType": [
+      "Bug",
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 284,
+    "name": "Masquerain",
+    "pokemonType": [
+      "Bug",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 285,
+    "name": "Shroomish",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 286,
+    "name": "Breloom",
+    "pokemonType": [
+      "Grass",
+      "Fighting"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 287,
+    "name": "Slakoth",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 288,
+    "name": "Vigoroth",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 289,
+    "name": "Slaking",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 290,
+    "name": "Nincada",
+    "pokemonType": [
+      "Bug",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 291,
+    "name": "Ninjask",
+    "pokemonType": [
+      "Bug",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 292,
+    "name": "Shedinja",
+    "pokemonType": [
+      "Bug",
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 293,
+    "name": "Whismur",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 294,
+    "name": "Loudred",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 295,
+    "name": "Exploud",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 296,
+    "name": "Makuhita",
+    "pokemonType": [
+      "Fighting"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 297,
+    "name": "Hariyama",
+    "pokemonType": [
+      "Fighting"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 298,
+    "name": "Azurill",
+    "pokemonType": [
+      "Normal",
+      "Fairy"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 299,
+    "name": "Nosepass",
+    "pokemonType": [
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 300,
+    "name": "Skitty",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 301,
+    "name": "Delcatty",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 302,
+    "name": "Sableye",
+    "pokemonType": [
+      "Dark",
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 303,
+    "name": "Mawile",
+    "pokemonType": [
+      "Steel",
+      "Fairy"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 304,
+    "name": "Aron",
+    "pokemonType": [
+      "Steel",
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 305,
+    "name": "Lairon",
+    "pokemonType": [
+      "Steel",
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 306,
+    "name": "Aggron",
+    "pokemonType": [
+      "Steel",
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 307,
+    "name": "Meditite",
+    "pokemonType": [
+      "Fighting",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 308,
+    "name": "Medicham",
+    "pokemonType": [
+      "Fighting",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 309,
+    "name": "Electrike",
+    "pokemonType": [
+      "Electric"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 310,
+    "name": "Manectric",
+    "pokemonType": [
+      "Electric"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 311,
+    "name": "Plusle",
+    "pokemonType": [
+      "Electric"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 312,
+    "name": "Minun",
+    "pokemonType": [
+      "Electric"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 313,
+    "name": "Volbeat",
+    "pokemonType": [
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 314,
+    "name": "Illumise",
+    "pokemonType": [
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 315,
+    "name": "Roselia",
+    "pokemonType": [
+      "Grass",
+      "Poison"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 316,
+    "name": "Gulpin",
+    "pokemonType": [
+      "Poison"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 317,
+    "name": "Swalot",
+    "pokemonType": [
+      "Poison"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 318,
+    "name": "Carvanha",
+    "pokemonType": [
+      "Water",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 319,
+    "name": "Sharpedo",
+    "pokemonType": [
+      "Water",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 320,
+    "name": "Wailmer",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 321,
+    "name": "Wailord",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 322,
+    "name": "Numel",
+    "pokemonType": [
+      "Fire",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 323,
+    "name": "Camerupt",
+    "pokemonType": [
+      "Fire",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 324,
+    "name": "Torkoal",
+    "pokemonType": [
+      "Fire"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 325,
+    "name": "Spoink",
+    "pokemonType": [
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 326,
+    "name": "Grumpig",
+    "pokemonType": [
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 327,
+    "name": "Spinda",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 328,
+    "name": "Trapinch",
+    "pokemonType": [
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 329,
+    "name": "Vibrava",
+    "pokemonType": [
+      "Ground",
+      "Dragon"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 330,
+    "name": "Flygon",
+    "pokemonType": [
+      "Ground",
+      "Dragon"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 331,
+    "name": "Cacnea",
+    "pokemonType": [
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 332,
+    "name": "Cacturne",
+    "pokemonType": [
+      "Grass",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 333,
+    "name": "Swablu",
+    "pokemonType": [
+      "Normal",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 334,
+    "name": "Altaria",
+    "pokemonType": [
+      "Dragon",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 335,
+    "name": "Zangoose",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 336,
+    "name": "Seviper",
+    "pokemonType": [
+      "Poison"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 337,
+    "name": "Lunatone",
+    "pokemonType": [
+      "Rock",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 338,
+    "name": "Solrock",
+    "pokemonType": [
+      "Rock",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 339,
+    "name": "Barboach",
+    "pokemonType": [
+      "Water",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 340,
+    "name": "Whiscash",
+    "pokemonType": [
+      "Water",
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 341,
+    "name": "Corphish",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 342,
+    "name": "Crawdaunt",
+    "pokemonType": [
+      "Water",
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 343,
+    "name": "Baltoy",
+    "pokemonType": [
+      "Ground",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 344,
+    "name": "Claydol",
+    "pokemonType": [
+      "Ground",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 345,
+    "name": "Lileep",
+    "pokemonType": [
+      "Rock",
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 346,
+    "name": "Cradily",
+    "pokemonType": [
+      "Rock",
+      "Grass"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 347,
+    "name": "Anorith",
+    "pokemonType": [
+      "Rock",
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 348,
+    "name": "Armaldo",
+    "pokemonType": [
+      "Rock",
+      "Bug"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 349,
+    "name": "Feebas",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 350,
+    "name": "Milotic",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 351,
+    "name": "Castform",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 352,
+    "name": "Kecleon",
+    "pokemonType": [
+      "Normal"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 353,
+    "name": "Shuppet",
+    "pokemonType": [
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 354,
+    "name": "Banette",
+    "pokemonType": [
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 355,
+    "name": "Duskull",
+    "pokemonType": [
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 356,
+    "name": "Dusclops",
+    "pokemonType": [
+      "Ghost"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 357,
+    "name": "Tropius",
+    "pokemonType": [
+      "Grass",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 358,
+    "name": "Chimecho",
+    "pokemonType": [
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 359,
+    "name": "Absol",
+    "pokemonType": [
+      "Dark"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 360,
+    "name": "Wynaut",
+    "pokemonType": [
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 361,
+    "name": "Snorunt",
+    "pokemonType": [
+      "Ice"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 362,
+    "name": "Glalie",
+    "pokemonType": [
+      "Ice"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 363,
+    "name": "Spheal",
+    "pokemonType": [
+      "Ice",
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 364,
+    "name": "Sealeo",
+    "pokemonType": [
+      "Ice",
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 365,
+    "name": "Walrein",
+    "pokemonType": [
+      "Ice",
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 366,
+    "name": "Clamperl",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 367,
+    "name": "Huntail",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 368,
+    "name": "Gorebyss",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 369,
+    "name": "Relicanth",
+    "pokemonType": [
+      "Water",
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 370,
+    "name": "Luvdisc",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 371,
+    "name": "Bagon",
+    "pokemonType": [
+      "Dragon"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 372,
+    "name": "Shelgon",
+    "pokemonType": [
+      "Dragon"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 373,
+    "name": "Salamence",
+    "pokemonType": [
+      "Dragon",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 374,
+    "name": "Beldum",
+    "pokemonType": [
+      "Steel",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 375,
+    "name": "Metang",
+    "pokemonType": [
+      "Steel",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 376,
+    "name": "Metagross",
+    "pokemonType": [
+      "Steel",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 377,
+    "name": "Regirock",
+    "pokemonType": [
+      "Rock"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 378,
+    "name": "Regice",
+    "pokemonType": [
+      "Ice"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 379,
+    "name": "Registeel",
+    "pokemonType": [
+      "Steel"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 380,
+    "name": "Latias",
+    "pokemonType": [
+      "Dragon",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 381,
+    "name": "Latios",
+    "pokemonType": [
+      "Dragon",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 382,
+    "name": "Kyogre",
+    "pokemonType": [
+      "Water"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 383,
+    "name": "Groudon",
+    "pokemonType": [
+      "Ground"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 384,
+    "name": "Rayquaza",
+    "pokemonType": [
+      "Dragon",
+      "Flying"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 385,
+    "name": "Jirachi",
+    "pokemonType": [
+      "Steel",
+      "Psychic"
+    ],
+    "description": ""
+  },
+  {
+    "pokemonID": 386,
+    "name": "Deoxys",
+    "pokemonType": [
+      "Psychic"
+    ],
+    "description": ""
+  }
+]

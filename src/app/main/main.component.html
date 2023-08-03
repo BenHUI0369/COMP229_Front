@@ -1,3 +1,4 @@
+<!--
 <div id="wrapper">
   <div class="pokemonList" *ngFor="let post of posts">
     <div class="imageContainer">
@@ -12,6 +13,29 @@
     <div class="pokemonType">
       <div class="{{type}}" *ngFor="let type of post.pokemonType">
         <span>{{type}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<div id="wrapper">
+  <div class="pokemonCard-img" *ngFor="let post of posts"
+    [style.background-image]="'url(../../assets/PokeCard/' + post.pokemonType[0] + '.png)'">
+    <div class="pokemonID-img">
+      <h5>{{formatPokeminID(post.pokemonID)}}</h5>
+    </div>
+    <div class="logo">
+      <div class="img">
+        <img src="../../assets/Gif/{{getImageName(post.pokemonID, post.name)}}">
+      </div>
+      <div class="name">
+        {{post.name}}
+      </div>
+    </div>
+    <div class="typeWrapper" *ngFor="let type of post.pokemonType">
+      <div class="type">
+        <div class="{{type}}Square"></div>
+        <h6>{{type}}</h6>
       </div>
     </div>
   </div>
