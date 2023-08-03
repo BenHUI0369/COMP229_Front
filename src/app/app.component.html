@@ -20,7 +20,7 @@
           <mat-toolbar color="primary" id="mainNav" *ngIf="alreadyLogin">
             
             <!-- Custom Logo placed in the main navigation bar -->
-            <span><a href="/" class="navbar-brand"><img src="/assets/logo.jpg" alt="Logo" style="width: 50px; height: auto"></a>&nbsp;&nbsp;&nbsp;</span>
+            <span><a href="{{isloggingin? '/main' : '/'}}" class="navbar-brand"><img src="/assets/logo.jpg" alt="Logo" style="width: 50px; height: auto"></a>&nbsp;&nbsp;&nbsp;</span>
             
             <span>Pokemon Database</span>
             <span class="example-spacer"></span>

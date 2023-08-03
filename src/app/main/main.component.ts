@@ -13,15 +13,27 @@ export class MainComponent {
   }
 
   posts: any[]= [];
+  visiblePosts: any[]= [];
+  displayedPokemonsCount: number = 20; // Initial number of Pokémon to display
 
   loadPosts() {
     this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
       this.posts = res;
       // sort by the pokemon ID
       this.posts.sort((a,b) => {
+        this.updateVisiblePosts();
         return a.pokemonID - b.pokemonID;
       })
     });
+  }
+
+  updateVisiblePosts() {
+    this.visiblePosts = this.posts.slice(0, this.displayedPokemonsCount);
+  }
+
+  loadMorePokemons() {
+    this.displayedPokemonsCount += 20; // Increase the number of Pokémon to display by 20
+    this.updateVisiblePosts();
   }
 
   clearAllPosts() {
