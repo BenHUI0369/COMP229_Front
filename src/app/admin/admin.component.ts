@@ -23,19 +23,22 @@ export class AdminComponent {
   };
 
   posts: any[]= [];
+  visiblePosts: any[]= [];
+  displayedPokemonsCount: number = 20; // Initial number of Pokémon to display
 
   loadPosts() {
     this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
       this.posts = res;
       // sort by the pokemon ID
       this.posts.sort((a,b) => {
+        this.updateVisiblePosts();
         return a.pokemonID - b.pokemonID;
       })
     });
   };
 
   clearAllPosts() {
-    this.posts = [];
+    this.visiblePosts = [];
   };
 
   padZeroes(number: Number) {
@@ -67,10 +70,26 @@ export class AdminComponent {
     }
   };
 
+  displaySortPokemon(){
+    this.sortByPokemonID();
+    this.clearAllPosts();
+    this.updateVisiblePosts();
+  }
+
+  updateVisiblePosts() {
+    this.visiblePosts = this.posts.slice(0, this.displayedPokemonsCount);
+  }
+
+  loadMorePokemons() {
+    this.displayedPokemonsCount += 20; // Increase the number of Pokémon to display by 20
+    this.updateVisiblePosts();
+  }
+
   edit(post: any) {
     const copiedData = JSON.parse(JSON.stringify(post));
     const dialogRef = this.dialog.open(EditFormComponent, {
-      width: '600px', // Set the width of the modal as per your requirement
+      width: 'auto', // Set the width of the modal as per your requirement
+      height: 'auto',
       data: copiedData // Pass the post data to the edit form component
     }); 
 
@@ -120,7 +139,8 @@ export class AdminComponent {
 
   add() {
     const dialogRef = this.dialog.open(AddPokemonFormComponent, {
-      width: '400px'
+      width: 'auto', 
+      height: 'auto'
     });
 
     dialogRef.afterClosed().subscribe(created => {

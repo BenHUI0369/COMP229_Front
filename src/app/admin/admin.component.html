@@ -22,7 +22,7 @@
       <button mat-icon-button color="warn" (click)="clearAllPosts()">
         <mat-icon>clear_all</mat-icon>
       </button>
-      <button mat-icon-button color="warn" (click)="sortByPokemonID()">
+      <button mat-icon-button color="warn" (click)="displaySortPokemon()">
         <mat-icon>sort</mat-icon>
       </button>
       <button mat-icon-button color="warn" (click)="add()" class="addPokemon">
@@ -66,7 +66,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let post of posts" class="allPokemon">
+        <tr *ngFor="let post of visiblePosts" class="allPokemon">
           <td>{{post.pokemonID}}</td>
           <td></td>
           <td id="_id">{{post._id}}</td>
@@ -90,10 +90,18 @@
 
         </tr>
       </tbody>
-
     </table>
   </div>
-
+  <div class="loadMoreButton">
+    <button mat-icon-button color="warn" (click)="loadMorePokemons()" class="loadBtn">
+      <div class="loadtext">
+        <h1>Load More</h1>
+      </div>
+      <div class="loadicon">
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </button>
+  </div>
 
 </body>
 

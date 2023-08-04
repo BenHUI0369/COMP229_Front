@@ -60,6 +60,52 @@ td img:hover {
     }
 }
 
+.loadMoreButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.loadBtn {
+    font-size: 10px;
+    width: 90px;
+    height: 90px;
+}
+
+.loadBtn h1 {
+    font-size: 20px;
+}
+
+.loadtext {
+    width: 100px;
+    text-align: center;
+    color: rgb(153, 153, 153);
+    position: relative;
+    left: -15px;
+    top: -6px;
+}
+
+.loadicon {
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    color: rgb(153, 153, 153);
+    position: relative;
+    left: -15px;
+    top: -40px;
+}
+
+.loadBtn:hover {
+    .loadicon {
+        color: rgb(0, 0, 0);
+    }
+
+    .loadtext {
+        color: rgb(0, 0, 0);
+    }
+}
+
 /* Existing CSS styles */
 
 /* Existing CSS styles */

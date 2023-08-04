@@ -1,12 +1,14 @@
-<div>
+<div id="addformwrapper">
+  <div class="createbanner">
+  </div>
   <h2>Create a New Pokemon</h2>
   <form (ngSubmit)="onSubmit()">
     <div>
-      <label for="pokemonID">Pokemon ID:</label>
-      <input type="number" id="pokemonID" name="pokemonID" [(ngModel)]="pokemonID" required>
+      <label for="pokemonID">Pokemon ID:</label><br>
+      <input type="number" id="pokemonID" name="pokemonID" [(ngModel)]="pokemonID" required><br>
     </div>
     <div>
-      <label for="pokemonName">Pokemon Name:</label>
+      <label for="pokemonName">Pokemon Name:</label><br>
       <input type="text" id="pokemonName" name="pokemonName" [(ngModel)]="pokemonName" required>
     </div>
     <!--
@@ -18,20 +20,22 @@
     </div>
     -->
     <div>
-      <label for="pokemonType">Pokemon Type:</label>
+      <label for="pokemonType">Pokemon Type:</label><br>
       <mat-select [(ngModel)]="selectedPokemonTypes" name="pokemonType" multiple>
         <mat-option *ngFor="let type of pokemonType" [value]="type.name">
           <img src="{{ type.image }}" alt="{{ type.name }}" class="pokemon-icon">
           {{ type.name }}
         </mat-option>
-      </mat-select>
+      </mat-select><br>
     </div>
     
     <div>
-      <label for="description">Description:</label>
-      <textarea id="description" name="description" [(ngModel)]="description"></textarea>
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" [(ngModel)]="description"></textarea><br>
     </div>
-    <button type="submit">Submit</button>
-    <button type="button" (click)="onCancel()">Cancel</button>
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit" id="regBtn">Submit</button>
+      <button mat-raised-button color="primary" type="submit" (click)="onCancel()" id="cancelBtn">Cancel</button>
+    </div>
   </form>
 </div>

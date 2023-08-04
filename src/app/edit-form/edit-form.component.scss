@@ -1,3 +1,14 @@
+#editwrapper {
+    width: 300px;
+}
+
+.editbanner {
+    background-image: url('../../assets/Image/createpokemon-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
 .pokemon-icon {
     width: 24px;
     height: 24px;
@@ -7,4 +18,21 @@
 .mat-select-trigger {
     display: flex;
     align-items: center;
+}
+
+.actions {
+    text-align: center;
+}
+
+#regBtn {
+    margin-right: 10px;
+    background-color: rgb(1, 0, 66);
+    color: #FFFFFF;
+    border-style: solid;
+    border-color: rgb(1, 0, 66);
+}
+
+#regBtn:hover {
+    border-style: solid;
+    border-color: rgb(238, 125, 195);
 }

@@ -16,29 +16,30 @@
   }
   */
 
-  mat-card {
-    width: 500px;
-  }
-  
-  mat-form-field {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  mat-raised-button {
-    #regBtn {
-      background-color: rgb(1, 0, 66);
-    }
+mat-card {
+  width: 500px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-raised-button {
+  #regBtn {
     background-color: rgb(1, 0, 66);
   }
 
-  .actions {
-    text-align: right;
-  }
+  background-color: rgb(1, 0, 66);
+}
 
-  #regfrom {
-    background-image: url('../../assets/Image/reg-background11.jpg');
-    background-size: cover;
+.actions {
+  text-align: right;
+}
+
+#regfrom {
+  background-image: url('../../assets/Image/reg-background11.jpg');
+  background-size: cover;
 }
 
 #regBtn {
