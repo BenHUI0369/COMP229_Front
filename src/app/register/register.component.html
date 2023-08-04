@@ -1,34 +1,37 @@
 <div class="register-container">
   <mat-card>
+    <div class="banner">
+      
+    </div>
     <mat-card-header>
       <mat-card-title>Register</mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="fill">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" id="regfrom">
+        <mat-form-field appearance="outline">
           <mat-label>Username</mat-label>
           <input matInput formControlName="username" required [(ngModel)]="username">
           <mat-error *ngIf="registerForm.get('username')">Username is required</mat-error>
           <mat-error *ngIf="registerForm.get('username')">Username must be at least 5 characters</mat-error>
         </mat-form-field><br>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
           <input matInput type="password" formControlName="password" required [(ngModel)]="password">
           <mat-error *ngIf="registerForm.get('password')">Password is required</mat-error>
           <mat-error *ngIf="registerForm.get('password')">Password must be at least 8 characters</mat-error>
         </mat-form-field><br>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
           <mat-label>Confirm Password</mat-label>
           <input matInput type="password" formControlName="confirmPassword" required>
           <mat-error *ngIf="registerForm.get('confirmPassword')">Confirm Password is required</mat-error>
         </mat-form-field>
 
         <div class="actions">
-          <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
-          <button mat-raised-button color="primary" type="submit" (click)="onCancel()">Cancel</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid" id="regBtn">Register</button>
+          <button mat-raised-button color="primary" type="submit" (click)="onCancel()" id="cancelBtn">Cancel</button>
         </div>
       </form>
     </mat-card-content>

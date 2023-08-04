@@ -17,7 +17,7 @@
   */
 
   mat-card {
-    width: 400px;
+    width: 500px;
   }
   
   mat-form-field {
@@ -25,7 +25,50 @@
     margin-bottom: 20px;
   }
   
+  mat-raised-button {
+    #regBtn {
+      background-color: rgb(1, 0, 66);
+    }
+    background-color: rgb(1, 0, 66);
+  }
+
   .actions {
     text-align: right;
   }
-  
+
+  #regfrom {
+    background-image: url('../../assets/Image/reg-background11.jpg');
+    background-size: cover;
+}
+
+#regBtn {
+  margin-right: 10px;
+  //background-color: rgb(1, 0, 66);
+  color: #FFFFFF;
+  border-style: solid;
+  border-color: rgb(1, 0, 66);
+}
+
+#regBtn:enabled {
+  background-color: rgb(1, 0, 66);
+}
+
+#cancelBtn {
+  background-color: transparent;
+  color: rgb(1, 0, 66);
+  border-style: solid;
+  border-color: rgb(1, 0, 66);
+}
+
+
+.banner {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  background-image: url('../../assets/Image/reg-banner.png');
+  background-size: cover;
+}
+
+input {
+  background-color: transparent;
+}
