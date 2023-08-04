@@ -94,23 +94,24 @@ body::after {
   background-color: transparent;
   width: 120px;
   height: 50px;
-  margin-top: 60px;
-  margin-right: 100px;
+  margin-top: 30px;
+  margin-right: 50px;
 }
 
 #visitorWrapper {
-  text-align: center  ;
+  text-align: center;
+  display: none;
 }
 
 .loginLayOut {
-  width: 1600px;
+  width: 1200px;
   display: flex;
   margin: auto;
-  height: 560px;
+  height: 465px;
   box-shadow: 1px 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
-  top: 300px;
+  top: 180px;
 }
 
 #welcomeMessage {
@@ -118,7 +119,7 @@ body::after {
   text-align: center;
   font-size: 60px;
   position: absolute;
-  left: 25%;
+  left: 12%;
   top: -15%;
   text-shadow: -3px 0 rgb(109, 154, 164), 0 3px rgb(109, 154, 164), 3px 0 rgb(109, 154, 164), 0 -3px rgb(109, 154, 164);
 }
@@ -138,9 +139,9 @@ body::after {
 }
 
 #login-right {
-  width: 500px;
-  padding-left: 100px;
-  padding-top: 100px;
+  width: 700px;
+  padding-left: 50px;
+  padding-top: 50px;
   background-color: #FFFFFF;
 
   h1 {

@@ -1,10 +1,21 @@
+/*
 .register-container {
+    background-image: url('../../assets/Image/reg-background.jpg');
+    //background-repeat: no-repeat;
+    //background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
   }
   
+  .my-dialog {
+    background-image: url('../../assets/Image/reg-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  */
+
   mat-card {
     width: 400px;
   }

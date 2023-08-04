@@ -185,9 +185,10 @@ hr {
 */
 
 #wrapper {
+    background-image: url(../../assets/Image/main-background.jpeg);
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
@@ -282,6 +283,8 @@ h6{
     z-index: 100;
 }
 
+
+/*
 .loadMoreButton {
     display: flex;
     justify-content: center;
@@ -313,6 +316,45 @@ h6{
 
     50% {
         box-shadow: 0 0 10px #ff8ac1, 0 0 20px #ff8ac1, 0 0 40px #ff8ac1, 0 0 60px #ff8ac1;
+    }
+}*/
+
+.loadMoreButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.loadBtn {
+    font-size: 10px;
+    width: 30px;
+}
+
+.loadBtn h1 {
+    font-size: 20px;
+}
+
+.loadtext {
+    width: 100px;
+    text-align: center;
+    color: rgb(153, 153, 153);
+}
+
+.loadicon {
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    color: rgb(153, 153, 153);
+}
+
+.loadBtn:hover {
+    .loadicon {
+        color: rgb(0, 0, 0);
+    }
+
+    .loadtext {
+        color: rgb(0, 0, 0);
     }
 }
 

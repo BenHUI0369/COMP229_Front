@@ -98,6 +98,7 @@ export class LoginComponent implements OnInit {
   openRegistrationDialog() {
     const dialogRef = this.dialog.open(RegisterComponent, {
       width: '400px', // Set the width of the dialog
+      height: '600px'
     });
 
     dialogRef.afterClosed().subscribe(result => {

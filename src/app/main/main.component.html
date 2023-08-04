@@ -41,5 +41,12 @@
   </div>
 </div>
 <div class="loadMoreButton">
-  <button class="loadMoreBtn" (click)="loadMorePokemons()">Load More</button>
+  <button mat-icon-button color="warn" (click)="loadMorePokemons()" class="loadBtn">
+    <div class="loadtext">
+      <h1>Load More</h1>
+    </div>
+    <div class="loadicon">
+      <mat-icon>expand_more</mat-icon>
+    </div>
+  </button>
 </div>
