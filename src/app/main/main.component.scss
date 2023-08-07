@@ -1,189 +1,3 @@
-/*
-.pokemonList {
-    width: 200px;
-    height: 300px;
-    text-align: left;
-    border-style: double;
-    border-radius: 21px;
-    margin-left: 20px;
-    margin-top: 60px;
-    background: linear-gradient(to top left, rgb(39, 65, 91) 0%, transparent 50%), linear-gradient(to top right, rgb(10, 20, 30) 0%, transparent 50%);
-
-}
-
-.imageContainer {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-}
-
-.pokemonImage {
-    vertical-align: middle;
-}
-
-.imageCenter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.pokemonNumber {
-    font-size: 15px;
-    text-align: left;
-}
-
-.pokemonName {
-    font-size: 24px;
-    line-height: 45px;
-    text-align: center;
-}
-
-.pokemonType {
-    padding-top: 30px;
-    display: flex;
-    justify-content:space-around;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-.Normal {
-    background-color: rgb(168, 168, 120);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Fighting {
-    background-color: rgb(192, 48, 40);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Flying {
-    background-color: rgb(168, 144, 240);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Poison {
-    background-color: rgb(160, 64, 160);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Ground {
-    background-color: rgb(224, 192, 104);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Rock {
-    background-color: rgb(184, 160, 56);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Bug {
-    background-color: rgb(168, 184, 32);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Gost {
-    background-color: rgb(112, 88, 152);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Steel {
-    background-color: rgb(184, 184, 208);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Fire {
-    background-color: rgb(240, 128, 48);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Water {
-    background-color: rgb(104, 144, 240);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Grass {
-    background-color: rgb(120, 200, 80);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Electric {
-    background-color: rgb(248, 208, 48);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Psychic {
-    background-color: rgb(248, 88, 136);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Ice {
-    background-color: rgb(152, 216, 216);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Dragon {
-    background-color: rgb(112, 56, 248);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Dark {
-    background-color: rgb(112, 88, 72);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-
-.Fairy {
-    background-color: rgb(238, 153, 172);
-    border-radius: 10px;
-    width: 60px;
-    text-align: center;
-}
-*/
-
 #wrapper {
     background-image: url(../../assets/Image/main-background.jpeg);
     display: flex;
@@ -283,41 +97,184 @@ h6{
     z-index: 100;
 }
 
+/*
+filter section
+*/
+
+.Normal {
+    background-color: rgb(170, 176, 159);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Fighting {
+    background-color: rgb(203, 95, 72);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Flying {
+    background-color: rgb(125, 166, 222);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Poison {
+    background-color: rgb(180, 104, 183);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Ground {
+    background-color: rgb(204, 159, 79);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Rock {
+    background-color: rgb(178, 160, 97);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Bug {
+    background-color: rgb(148, 188, 74);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Ghost {
+    background-color: rgb(132, 106, 182);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Steel {
+    background-color: rgb(137, 161, 176);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Fire {
+    background-color: rgb(234, 122, 60);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Water {
+    background-color: rgb(83, 154, 226);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Grass {
+    background-color: rgb(113, 197, 88);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Electric {
+    background-color: rgb(229, 197, 49);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Psychic {
+    background-color: rgb(229, 112, 155);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Ice {
+    background-color: rgb(112, 203, 212);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Dragon {
+    background-color: rgb(106, 123, 175);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Dark {
+    background-color: rgb(115, 108, 117);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.Fairy {
+    background-color: rgb(227, 151, 209);
+    border-radius: 10px;
+    width: 90px;
+    text-align: center;
+}
 
 /*
-.loadMoreButton {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
+Search function
+*/
+
+.searchtype, .searchnumber, .searchbar {
+    text-align: center;
 }
 
-.loadMoreBtn {
-    background-color: rgb(255, 117, 53);
-    color: white;
-    font-size: 18px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+.typeimg {
+    width: 20px;
+    height: 20px;
     position: relative;
-    animation: neon-glow 1.5s ease-in-out infinite;
+    top: -22px;
+    left: 93px;
 }
 
-.loadMoreBtn:hover {
-    background-color: rgb(233, 98, 36);
+.typeoption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@keyframes neon-glow {
+.columnwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 33.33%;
+    
+}
 
-    0%,
-    100% {
-        box-shadow: 0 0 10px #ff6ea3, 0 0 20px #ff6ea3, 0 0 40px #ff6ea3, 0 0 60px #ff6ea3;
-    }
+.eachtype {
+    opacity: 0.5;
+    flex-basis: calc(33.33% - 20px);
+    list-style: none;
+    box-sizing: border-box;
+    width: 30px;
+}
 
-    50% {
-        box-shadow: 0 0 10px #ff8ac1, 0 0 20px #ff8ac1, 0 0 40px #ff8ac1, 0 0 60px #ff8ac1;
-    }
-}*/
+.eachtype:hover {
+    cursor: pointer;
+}
+
+.numberrange {
+    font-size: 30px;
+}
+
+/*
+Load more button
+*/
 
 .loadMoreButton {
     display: flex;
