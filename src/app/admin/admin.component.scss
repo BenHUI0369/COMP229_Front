@@ -108,6 +108,252 @@ td img:hover {
 
 /* Existing CSS styles */
 
+/*
+filter section
+*/
+
+.Normal {
+    background-color: rgb(170, 176, 159);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Fighting {
+    background-color: rgb(203, 95, 72);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Flying {
+    background-color: rgb(125, 166, 222);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Poison {
+    background-color: rgb(180, 104, 183);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Ground {
+    background-color: rgb(204, 159, 79);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Rock {
+    background-color: rgb(178, 160, 97);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Bug {
+    background-color: rgb(148, 188, 74);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Ghost {
+    background-color: rgb(132, 106, 182);
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Steel {
+    background-color: rgb(137, 161, 176);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Fire {
+    background-color: rgb(234, 122, 60);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Water {
+    background-color: rgb(83, 154, 226);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Grass {
+    background-color: rgb(113, 197, 88);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Electric {
+    background-color: rgb(229, 197, 49);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Psychic {
+    background-color: rgb(229, 112, 155);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Ice {
+    background-color: rgb(112, 203, 212);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Dragon {
+    background-color: rgb(106, 123, 175);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Dark {
+    background-color: rgb(115, 108, 117);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+.Fairy {
+    background-color: rgb(227, 151, 209);
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: -6px;
+    height: 30px;
+    margin-bottom: -6px;
+    text-align: center;
+}
+
+/*
+Search function
+*/
+#searchexpand:hover {
+    color: red;
+}
+
+.searchtype, .searchnumber, .searchbar {
+    text-align: center;
+}
+
+.typeimg {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -22px;
+    left: 93px;
+}
+
+.typeoption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.columnwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 33.33%;
+    
+}
+
+.eachtype {
+    opacity: 0.5;
+    flex-basis: calc(33.33% - 20px);
+    list-style: none;
+    box-sizing: border-box;
+    width: 30px;
+}
+
+.eachtype:hover {
+    cursor: pointer;
+}
+
+.sarchnumber {
+    margin-bottom: 20px;
+}
+
+.numberrange {
+    font-size: 30px;
+}
+
+#minrange, #maxrange {
+    width: 60px;
+    height: 30px;
+}
+
+.expandLogo {
+    text-align: center;
+}
+
+.searchBtn {
+    background-color: #FFFFFF;
+    color: #000000;
+    margin-right: 60px;
+}
+
+.searchBtn:hover {
+    color: cyan;
+}
+
+.resetBtn {
+    border-style: solid;
+    border-color: rgb(1, 0, 66);
+    background-color: #FFFFFF;
+    color: red;
+}
+
 /* Existing CSS styles */
 
 .addPokemon {

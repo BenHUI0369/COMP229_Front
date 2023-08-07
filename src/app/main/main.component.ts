@@ -13,6 +13,7 @@ export class MainComponent {
   }
 
   posts: any[]= [];
+  numberRangePosts: any[]= [];
   visiblePosts: any[]= [];
   displayedPokemonsCount: number = 20; // Initial number of Pokémon to display
   pokemonType: any[] = [
@@ -36,9 +37,9 @@ export class MainComponent {
     {name: 'Water', image: '../assets/pokemonType/Water.png', isSelect: false}
   ];
   searchType: any[] = [];
-  minRange!: number;
-  maxRange!: number;
-
+  minRange!: number | undefined;
+  maxRange!: number | undefined;
+  isExpand = false;
   selectType(type: any){
     const clickedType = this.pokemonType.find(item => item.name === type.name);
     if(clickedType) {
@@ -67,6 +68,44 @@ export class MainComponent {
     console.log('man' + this.maxRange);
   }
 
+  // clear all search field
+  clearAllSearch() {
+    this.minRange = undefined;
+    this.maxRange = undefined;
+    this.setAllisSelectFalse();
+    this.searchType = [];
+  }
+
+  // set all isSelect value in pokemonTypearray to false
+  setAllisSelectFalse() {
+    for (let type of this.pokemonType) {
+      type.isSelect = false;
+    }
+  }
+
+  // function to check if the expand button is click
+  checkExpand() {
+    this.isExpand = !this.isExpand;
+  }
+
+  // display the selected type pokemon
+  displaySearch() {
+    this.displayRange();
+    if (this.searchType.length > 0) {
+      this.numberRangePosts = this.numberRangePosts.filter(pokemon => {
+        return pokemon.pokemonType.some((type: any) => this.searchType.includes(type))
+      })
+      this.updateVisiblePosts(); 
+    } else {
+      this.updateVisiblePosts();
+    }
+  }
+
+  displayRange() {
+    this.numberRangePosts = this.posts.slice(this.minRange? this.minRange - 1 : 0, this.maxRange? this.maxRange: this.posts.length);
+    this.visiblePosts = this.numberRangePosts.slice(0, this.displayedPokemonsCount);
+  }
+
   loadPosts() {
     this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
       this.posts = res;
@@ -79,7 +118,11 @@ export class MainComponent {
   }
 
   updateVisiblePosts() {
-    this.visiblePosts = this.posts.slice(0, this.displayedPokemonsCount);
+    if (this.numberRangePosts.length > 0) {
+      this.visiblePosts = this.numberRangePosts.slice(0, this.displayedPokemonsCount);
+    } else {
+      this.visiblePosts = this.posts.slice(0, this.displayedPokemonsCount);
+    }
   }
 
   loadMorePokemons() {

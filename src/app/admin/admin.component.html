@@ -29,6 +29,43 @@
         <mat-icon>add_circle_outline</mat-icon>
       </button>
     </header>
+    <div class="searchbar">
+      <h1>Advanced Search</h1>
+    </div>
+    <div class="allSearch" *ngIf="isExpand">
+      <div class="searchtype">
+        <h3>Type</h3>
+      </div>
+      <div class="typeoption">
+        <ul class="typelist">
+          <div class="columnwrapper">
+            <li class="eachtype" [style.opacity]="type.isSelect ? 1 : 0.5" (click)="selectType(type)"
+              *ngFor="let type of pokemonType">
+              <div class="{{type.name}}">
+                <span>{{type.name}}</span>
+              </div>
+              <img class="typeimg" src="{{type.image}}">
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="searchnumber">
+        <h3>Number Range</h3>
+    
+        <div class="sarchnumber">
+          <input type="text" id="minrange" [(ngModel)]="minRange">
+          <span class="numberrange">&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+          <input type="text" id="maxrange" [(ngModel)]="maxRange">
+        </div>
+        <div class="searchBtnWrapper">
+          <button (click)="displaySearch()" mat-button class="searchBtn"><mat-icon>search</mat-icon>Search</button>
+          <button (click)="clearAllSearch()" mat-button class="resetBtn"><mat-icon>clear</mat-icon>Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="expandLogo">
+      <mat-icon id="searchexpand" (click)="checkExpand()">{{isExpand ? 'expand_less' : 'expand_more'}}</mat-icon>
+    </div>
   </div>
 
 

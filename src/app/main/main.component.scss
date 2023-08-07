@@ -231,6 +231,10 @@ filter section
 Search function
 */
 
+#searchexpand:hover {
+    color: red;
+}
+
 .searchtype, .searchnumber, .searchbar {
     text-align: center;
 }
@@ -268,8 +272,32 @@ Search function
     cursor: pointer;
 }
 
+.sarchnumber {
+    margin-bottom: 20px;
+}
+
 .numberrange {
     font-size: 30px;
+}
+
+#minrange, #maxrange {
+    width: 60px;
+    height: 30px;
+}
+
+.expandLogo {
+    text-align: center;
+}
+
+.searchBtn {
+    background-color: rgb(1, 0, 66);
+    color: #FFFFFF;
+    margin-right: 60px;
+}
+
+.resetBtn {
+    border-style: solid;
+    border-color: rgb(1, 0, 66);
 }
 
 /*
