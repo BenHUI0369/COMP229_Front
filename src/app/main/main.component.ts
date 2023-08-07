@@ -74,6 +74,7 @@ export class MainComponent {
     this.maxRange = undefined;
     this.setAllisSelectFalse();
     this.searchType = [];
+    this.displayedPokemonsCount = 20;
   }
 
   // set all isSelect value in pokemonTypearray to false
