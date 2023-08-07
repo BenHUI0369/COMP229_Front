@@ -123,9 +123,9 @@ export class AdminComponent {
       this.posts = res;
       // sort by the pokemon ID
       this.posts.sort((a,b) => {
-        this.updateVisiblePosts();
         return a.pokemonID - b.pokemonID;
       })
+      this.updateVisiblePosts();
     });
   };
 
@@ -151,7 +151,7 @@ export class AdminComponent {
   };
 
   sortByPokemonID() {
-    if (this.numberRangePosts[0].pokemonID < this.numberRangePosts[this.numberRangePosts.length - 1].pokemonID) {
+    if (this.numberRangePosts[0].pokemonID < this.numberRangePosts[this.numberRangePosts.length - 3].pokemonID) {
       this.numberRangePosts.sort((a,b) => {
         return b.pokemonID - a.pokemonID;
       })
@@ -165,14 +165,15 @@ export class AdminComponent {
   displaySortPokemon(){
     this.sortByPokemonID();
     this.clearAllPosts();
-    this.updateVisiblePosts();
+    this.updateVisiblePosts(); 
   }
 
   updateVisiblePosts() {
     if (this.numberRangePosts.length > 0) {
       this.visiblePosts = this.numberRangePosts.slice(0, this.displayedPokemonsCount);
     } else {
-      this.visiblePosts = this.posts.slice(0, this.displayedPokemonsCount);
+      this.displayRange();
+      this.visiblePosts = this.numberRangePosts.slice(0, this.displayedPokemonsCount);
     }
   }
 
