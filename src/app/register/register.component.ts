@@ -17,6 +17,10 @@ export class RegisterComponent implements OnInit {
   loading: boolean = false;
   hide: boolean = true;
   registerForm!: FormGroup;
+  // onlince deployed api
+  private URL = 'https://pokemondb-benhui.onrender.com';
+  // local testing api
+  private localURL = 'http://localhost:4000';
 
   constructor(
     private http: HttpClient,
@@ -42,7 +46,7 @@ export class RegisterComponent implements OnInit {
       };
 
       // Call the API service to create an account
-      this.http.post(`http://localhost:4000/auth/signup`, userData).subscribe(
+      this.http.post(`${this.URL}/auth/signup`, userData).subscribe(
         response => {
           // Handle the successful response from the API
           this.loading = false;

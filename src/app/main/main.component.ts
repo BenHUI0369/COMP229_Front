@@ -40,6 +40,12 @@ export class MainComponent {
   minRange!: number | undefined;
   maxRange!: number | undefined;
   isExpand = false;
+  // online deployed api
+  private URL = 'https://pokemondb-benhui.onrender.com/pokemons';
+  // local testing api 
+  private localURL = 'http://localhost:4000/pokemons';
+
+
   selectType(type: any){
     const clickedType = this.pokemonType.find(item => item.name === type.name);
     if(clickedType) {
@@ -108,7 +114,7 @@ export class MainComponent {
   }
 
   loadPosts() {
-    this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
+    this.http.get(`${this.URL}/pokemons`).subscribe((res: any) => {
       this.posts = res;
       // sort by the pokemon ID
       this.posts.sort((a,b) => {
