@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { EditFormComponent } from '../edit-form/edit-form.component'; 
+import { EditFormComponent } from '../edit-form/edit-form.component';
 import { DeletePokemonFormComponent } from '../delete-pokemon-form/delete-pokemon-form.component';
 import { PokemonEditService } from '../service/pokemon-edit.service';
 import { AddPokemonFormComponent } from '../add-pokemon-form/add-pokemon-form.component';
@@ -18,42 +18,46 @@ export class AdminComponent {
     private http: HttpClient,
     private dialog: MatDialog,
     private pokemonEdit: PokemonEditService
-    ){
+  ) {
     this.loadPosts();
   };
 
-  posts: any[]= [];
-  numberRangePosts: any[]= [];
-  visiblePosts: any[]= [];
+  posts: any[] = [];
+  numberRangePosts: any[] = [];
+  visiblePosts: any[] = [];
   displayedPokemonsCount: number = 20; // Initial number of Pokémon to display
   pokemonType: any[] = [
-    {name: 'Bug', image: '../assets/pokemonType/Bug.png', isSelect: false}, 
-    {name: 'Dark', image: '../assets/pokemonType/Dark.png', isSelect: false}, 
-    {name: 'Dragon', image: '../assets/pokemonType/Dragon.png', isSelect: false}, 
-    {name: 'Electric', image: '../assets/pokemonType/Electric.png', isSelect: false}, 
-    {name: 'Fairy', image: '../assets/pokemonType/Fairy.png', isSelect: false}, 
-    {name: 'Fighting', image: '../assets/pokemonType/Fighting.png', isSelect: false}, 
-    {name: 'Fire', image: '../assets/pokemonType/Fire.png', isSelect: false}, 
-    {name: 'Flying', image: '../assets/pokemonType/Flying.png', isSelect: false}, 
-    {name: 'Ghost', image: '../assets/pokemonType/Ghost.png', isSelect: false}, 
-    {name: 'Grass', image: '../assets/pokemonType/Grass.png', isSelect: false}, 
-    {name: 'Ground', image: '../assets/pokemonType/Ground.png', isSelect: false}, 
-    {name: 'Ice', image: '../assets/pokemonType/Ice.png', isSelect: false}, 
-    {name: 'Normal', image: '../assets/pokemonType/Normal.png', isSelect: false}, 
-    {name: 'Poison', image: '../assets/pokemonType/Poison.png', isSelect: false}, 
-    {name: 'Psychic', image: '../assets/pokemonType/Psychic.png', isSelect: false}, 
-    {name: 'Rock', image: '../assets/pokemonType/Rock.png', isSelect: false}, 
-    {name: 'Steel', image: '../assets/pokemonType/Steel.png', isSelect: false}, 
-    {name: 'Water', image: '../assets/pokemonType/Water.png', isSelect: false}
+    { name: 'Bug', image: '../assets/pokemonType/Bug.png', isSelect: false },
+    { name: 'Dark', image: '../assets/pokemonType/Dark.png', isSelect: false },
+    { name: 'Dragon', image: '../assets/pokemonType/Dragon.png', isSelect: false },
+    { name: 'Electric', image: '../assets/pokemonType/Electric.png', isSelect: false },
+    { name: 'Fairy', image: '../assets/pokemonType/Fairy.png', isSelect: false },
+    { name: 'Fighting', image: '../assets/pokemonType/Fighting.png', isSelect: false },
+    { name: 'Fire', image: '../assets/pokemonType/Fire.png', isSelect: false },
+    { name: 'Flying', image: '../assets/pokemonType/Flying.png', isSelect: false },
+    { name: 'Ghost', image: '../assets/pokemonType/Ghost.png', isSelect: false },
+    { name: 'Grass', image: '../assets/pokemonType/Grass.png', isSelect: false },
+    { name: 'Ground', image: '../assets/pokemonType/Ground.png', isSelect: false },
+    { name: 'Ice', image: '../assets/pokemonType/Ice.png', isSelect: false },
+    { name: 'Normal', image: '../assets/pokemonType/Normal.png', isSelect: false },
+    { name: 'Poison', image: '../assets/pokemonType/Poison.png', isSelect: false },
+    { name: 'Psychic', image: '../assets/pokemonType/Psychic.png', isSelect: false },
+    { name: 'Rock', image: '../assets/pokemonType/Rock.png', isSelect: false },
+    { name: 'Steel', image: '../assets/pokemonType/Steel.png', isSelect: false },
+    { name: 'Water', image: '../assets/pokemonType/Water.png', isSelect: false }
   ];
   searchType: any[] = [];
   minRange!: number | undefined;
   maxRange!: number | undefined;
   isExpand = false;
+  // online deployed api
+  private URL = 'https://pokemondb-benhui.onrender.com/pokemons';
+  // local testing api 
+  private localURL = 'http://localhost:4000/pokemons';
 
-  selectType(type: any){
+  selectType(type: any) {
     const clickedType = this.pokemonType.find(item => item.name === type.name);
-    if(clickedType) {
+    if (clickedType) {
       clickedType.isSelect = !clickedType.isSelect;
     }
     this.loadSelectedType();
@@ -61,7 +65,7 @@ export class AdminComponent {
 
   loadSelectedType() {
     this.searchType = [];
-    for(let type of this.pokemonType) {
+    for (let type of this.pokemonType) {
       if (type.isSelect === true) {
         this.searchType.push(type.name);
       }
@@ -71,7 +75,7 @@ export class AdminComponent {
   // test of the loadSelectedType method
   displaySelectedType() {
     console.log(this.searchType);
-    
+
   }
 
   displayNumberRange() {
@@ -107,23 +111,23 @@ export class AdminComponent {
       this.numberRangePosts = this.numberRangePosts.filter(pokemon => {
         return pokemon.pokemonType.some((type: any) => this.searchType.includes(type))
       })
-      this.updateVisiblePosts(); 
+      this.updateVisiblePosts();
     } else {
       this.updateVisiblePosts();
     }
   }
 
   displayRange() {
-    this.numberRangePosts = this.posts.slice(this.minRange? this.minRange - 1 : 0, this.maxRange? this.maxRange: this.posts.length);
+    this.numberRangePosts = this.posts.slice(this.minRange ? this.minRange - 1 : 0, this.maxRange ? this.maxRange : this.posts.length);
     this.visiblePosts = this.numberRangePosts.slice(0, this.displayedPokemonsCount);
   }
 
 
   loadPosts() {
-    this.http.get('http://localhost:4000/pokemons').subscribe((res: any) => {
+    this.http.get(`${this.URL}/pokemons`).subscribe((res: any) => {
       this.posts = res;
       // sort by the pokemon ID
-      this.posts.sort((a,b) => {
+      this.posts.sort((a, b) => {
         return a.pokemonID - b.pokemonID;
       })
       this.updateVisiblePosts();
@@ -153,20 +157,20 @@ export class AdminComponent {
 
   sortByPokemonID() {
     if (this.numberRangePosts[0].pokemonID < this.numberRangePosts[this.numberRangePosts.length - 3].pokemonID) {
-      this.numberRangePosts.sort((a,b) => {
+      this.numberRangePosts.sort((a, b) => {
         return b.pokemonID - a.pokemonID;
       })
     } else {
-      this.numberRangePosts.sort((a,b) => {
+      this.numberRangePosts.sort((a, b) => {
         return a.pokemonID - b.pokemonID;
       })
     }
   };
 
-  displaySortPokemon(){
+  displaySortPokemon() {
     this.sortByPokemonID();
     this.clearAllPosts();
-    this.updateVisiblePosts(); 
+    this.updateVisiblePosts();
   }
 
   updateVisiblePosts() {
@@ -189,11 +193,11 @@ export class AdminComponent {
       width: 'auto', // Set the width of the modal as per your requirement
       height: 'auto',
       data: copiedData // Pass the post data to the edit form component
-    }); 
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       // Handle any logic after the modal is closed (e.g., refresh the data, if needed)
-      if(result) {       
+      if (result) {
         this.pokemonEdit.editPokemon(result).subscribe(
           updatedData => {
             console.log(`pokemon ID ${result.pokemonID} was updated!`);
@@ -202,12 +206,12 @@ export class AdminComponent {
           error => {
             console.log("Error!");
             console.log(result._id);
-            
+
           }
         )
       }
     });
-  } 
+  }
 
 
   // Admin can now delete the pokemon
@@ -224,7 +228,7 @@ export class AdminComponent {
         this.pokemonEdit.deletePokemon(pokemonDate._id).subscribe(
           () => {
             console.log(`Pokemon ID: ${pokemonDate.pokemonID} was deleted`);
-            
+
           },
           error => {
             console.log("Error!");
@@ -237,7 +241,7 @@ export class AdminComponent {
 
   add() {
     const dialogRef = this.dialog.open(AddPokemonFormComponent, {
-      width: 'auto', 
+      width: 'auto',
       height: 'auto'
     });
 
