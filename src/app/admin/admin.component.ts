@@ -5,6 +5,7 @@ import { EditFormComponent } from '../edit-form/edit-form.component';
 import { DeletePokemonFormComponent } from '../delete-pokemon-form/delete-pokemon-form.component';
 import { PokemonEditService } from '../service/pokemon-edit.service';
 import { AddPokemonFormComponent } from '../add-pokemon-form/add-pokemon-form.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class AdminComponent {
   constructor(
     private http: HttpClient,
     private dialog: MatDialog,
+    private _snackBar: MatSnackBar,
     private pokemonEdit: PokemonEditService
   ) {
     this.loadPosts();
@@ -200,11 +202,17 @@ export class AdminComponent {
       if (result) {
         this.pokemonEdit.editPokemon(result).subscribe(
           updatedData => {
-            console.log(`pokemon ID ${result.pokemonID} was updated!`);
+            this._snackBar.open(`pokemon ID ${result.pokemonID} was updated!`, 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
             console.log(result);
           },
           error => {
-            console.log("Error!");
+            this._snackBar.open(`Error!`, 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
             console.log(result._id);
 
           }
@@ -227,11 +235,16 @@ export class AdminComponent {
         let pokemonDate: any = post.post;
         this.pokemonEdit.deletePokemon(pokemonDate._id).subscribe(
           () => {
-            console.log(`Pokemon ID: ${pokemonDate.pokemonID} was deleted`);
-
+            this._snackBar.open(`Pokemon ID: ${pokemonDate.pokemonID} was deleted!`, 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
           },
           error => {
-            console.log("Error!");
+            this._snackBar.open(`Error!`, 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
             console.log(pokemonDate._id);
           }
         )
@@ -249,10 +262,16 @@ export class AdminComponent {
       if (created) {
         this.pokemonEdit.createPokemon(created).subscribe(
           resolve => {
-            console.log("Pokemon Created!");
+            this._snackBar.open("Pokemon Created!", 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
           },
           reject => {
-            console.log("Faile to Create Pokemon!");
+            this._snackBar.open("Faile to Create Pokemon!", 'Close', {
+              duration: 3000,
+              verticalPosition: 'top'
+            });
           }
         )
       }
