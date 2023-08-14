@@ -41,9 +41,9 @@ export class MainComponent {
   maxRange!: number | undefined;
   isExpand = false;
   // online deployed api
-  private URL = 'https://pokemondb-benhui.onrender.com/pokemons';
+  private URL = 'https://pokemondb-benhui.onrender.com';
   // local testing api 
-  private localURL = 'http://localhost:4000/pokemons';
+  private localURL = 'http://localhost:4000';
 
 
   selectType(type: any){
