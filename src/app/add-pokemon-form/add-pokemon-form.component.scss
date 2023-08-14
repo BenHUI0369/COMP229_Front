@@ -1,5 +1,6 @@
 #addformwrapper {
     width: 300px;
+    margin: 30px;
 }
 
 .createbanner {
@@ -25,12 +26,13 @@
 }
 
 #regfrom {
-    background-image: url('../../assets/Image/reg-background11.jpg');
+    background-image: url('../../assets/Image/reg-background11.jpeg');
     background-size: cover;
 }
 
 #regBtn {
-    margin-right: 10px;
+    margin-right: 50px;
+    margin-top: 20px;
     background-color: rgb(1, 0, 66);
     color: #FFFFFF;
     border-style: solid;
@@ -39,7 +41,7 @@
 
 #regBtn:hover {
     border-style: solid;
-    border-color: rgb(238, 125, 195);
+    border-color: rgb(125, 221, 238);
 }
 
 #cancelBtn {
@@ -47,11 +49,13 @@
     color: rgb(1, 0, 66);
     border-style: solid;
     border-color: rgb(1, 0, 66);
+    margin-right: 40px;
+    margin-top: 20px;
 }
 
 #cancelBtn:hover {
     border-style: solid;
-    border-color: rgb(238, 125, 195);
+    border-color: rgb(125, 221, 238);
 }
 
 .banner {

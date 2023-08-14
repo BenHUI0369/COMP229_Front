@@ -1,27 +1,27 @@
 <div id="editwrapper">
   <div class="editbanner">
-  </div>
-  <h2>Edit Form</h2>
+  </div><br><br>
+  <h2>Edit Form</h2><br>
   <form (ngSubmit)="save()">
-    <label for="pokemonID">Pokemon ID</label><br>
-    <input type="text" id="pokemonID" [(ngModel)]="postData.pokemonID" name="pokemonID" required><br>
+    <label for="pokemonID"><b>Pokemon ID</b></label><br>
+    <input type="text" id="pokemonID" [(ngModel)]="postData.pokemonID" name="pokemonID" required><br><br>
   
-    <label for="name">Name</label><br>
-    <input type="text" id="name" [(ngModel)]="postData.name" name="name" required>
+    <label for="name"><b>Name</b></label><br>
+    <input type="text" id="name" [(ngModel)]="postData.name" name="name" required><br><br>
   
     <div>
-      <label for="pokemonType">Type</label><br>
+      <label for="pokemonType"><b>Type</b></label><br>
       <mat-select [(ngModel)]="postData.pokemonType" name="pokemonType" multiple>
         <mat-option *ngFor="let type of pokemonType" [value]="type.name">
           <img src="{{ type.image }}" alt="{{ type.name }}" class="pokemon-icon">
           {{ type.name }}
         </mat-option>
-      </mat-select>
+      </mat-select><br><br>
     </div>
   
   
-    <label for="name">Description</label><br>
-    <textarea type="text" id="description" [(ngModel)]="postData.description" name="description" required></textarea><br>
+    <label for="name"><b>Description</b></label><br>
+    <textarea type="text" id="description" [(ngModel)]="postData.description" name="description" required></textarea><br><br>
   
     <!-- Add more form fields for other properties you want to edit -->
     <div class="actions">

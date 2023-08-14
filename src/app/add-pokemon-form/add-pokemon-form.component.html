@@ -1,15 +1,15 @@
 <div id="addformwrapper">
   <div class="createbanner">
-  </div>
-  <h2>Create a New Pokemon</h2>
+  </div><br><br>
+  <h2>Create a New Pokemon</h2><br>
   <form (ngSubmit)="onSubmit()">
     <div>
-      <label for="pokemonID">Pokemon ID:</label><br>
-      <input type="number" id="pokemonID" name="pokemonID" [(ngModel)]="pokemonID" required><br>
+      <label for="pokemonID"><b>Pokemon ID:</b></label><br>
+      <input type="number" id="pokemonID" name="pokemonID" [(ngModel)]="pokemonID" required><br><br>
     </div>
     <div>
-      <label for="pokemonName">Pokemon Name:</label><br>
-      <input type="text" id="pokemonName" name="pokemonName" [(ngModel)]="pokemonName" required>
+      <label for="pokemonName"><b>Pokemon Name:</b></label><br>
+      <input type="text" id="pokemonName" name="pokemonName" [(ngModel)]="pokemonName" required><br><br>
     </div>
     <!--
     <div>
@@ -20,17 +20,17 @@
     </div>
     -->
     <div>
-      <label for="pokemonType">Pokemon Type:</label><br>
+      <label for="pokemonType"><b>Pokemon Type:</b></label>
       <mat-select [(ngModel)]="selectedPokemonTypes" name="pokemonType" multiple>
         <mat-option *ngFor="let type of pokemonType" [value]="type.name">
           <img src="{{ type.image }}" alt="{{ type.name }}" class="pokemon-icon">
           {{ type.name }}
         </mat-option>
-      </mat-select><br>
+      </mat-select><br><br>
     </div>
     
     <div>
-      <label for="description">Description:</label><br>
+      <label for="description"><b>Description:</b></label><br>
       <textarea id="description" name="description" [(ngModel)]="description"></textarea><br>
     </div>
     <div class="actions">
