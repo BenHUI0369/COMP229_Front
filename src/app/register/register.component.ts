@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
       };
 
       // Call the API service to create an account
-      this.http.post(`${this.URL}/auth/signup`, userData).subscribe(
+      this.http.post(`${this.localURL}/auth/signup`, userData).subscribe(
         response => {
           // Handle the successful response from the API
           this.loading = false;
@@ -63,6 +63,12 @@ export class RegisterComponent implements OnInit {
           this.loading = false;
           this.error = 'Failed to create an account. Please try again.';
           console.error(error);
+          if (error === 'Internal Server Error') {
+            this._snackBar.open("Username is already be used, try another one!", "Close", {
+              duration: 1000,
+              verticalPosition: 'top'
+            });
+          }
         }
       );
     }
