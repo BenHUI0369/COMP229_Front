@@ -15,6 +15,10 @@ export class AuthenticationService {
     //public admin: Observable<Admin | null>;
     public admin: Observable<any | null>;
     public loginStatus = new BehaviorSubject<any>('');
+    // onlince deployed api
+    private URL = 'https://pokemondb-benhui.onrender.com';
+    // local testing api
+    private localURL = 'http://localhost:4000';
 
     constructor(
         private router: Router,
@@ -35,7 +39,7 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`http://localhost:4000/pokemons/authenticate`, { username, password })
+        return this.http.post<any>(`${this.URL}/pokemons/authenticate`, { username, password })
             .pipe(map(admin => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('admin', JSON.stringify(admin));
@@ -45,7 +49,7 @@ export class AuthenticationService {
     }
 
     login_jwt2(username: string, password: string) {
-        return this.http.post<any>(`http://localhost:4000/auth/login`, { username, password })
+        return this.http.post<any>(`${this.URL}/auth/login`, { username, password })
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', user.refreshToken);
@@ -55,7 +59,7 @@ export class AuthenticationService {
     }
 
     login_jwt(username: string, password: string): Observable<any> {
-        return this.http.post<any>(`http://localhost:4000/auth/login`, { username, password })
+        return this.http.post<any>(`${this.URL}/auth/login`, { username, password })
           .pipe(
             map(user => {
               // Store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -84,7 +88,7 @@ export class AuthenticationService {
         localStorage.removeItem('user');
         this.adminSubject.next(null);
         this.router.navigate(['/login']);
-        this.http.post<any>(`http://localhost:4000/auth/logout`, {refreshToken}).pipe(
+        this.http.post<any>(`${this.URL}/auth/logout`, {refreshToken}).pipe(
             catchError((error: HttpErrorResponse) => {
               // Handle logout errors, e.g., the 401 Unauthorized error
               console.error('Logout failed:', error);
