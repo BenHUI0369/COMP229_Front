@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
       };
 
       // Call the API service to create an account
-      this.http.post(`${this.localURL}/auth/signup`, userData).subscribe(
+      this.http.post(`${this.URL}/auth/signup`, userData).subscribe(
         response => {
           // Handle the successful response from the API
           this.loading = false;
